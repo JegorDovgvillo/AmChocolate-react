@@ -1,0 +1,391 @@
+.sumbnail {
+    width: 130px;
+}
+
+.all-amount-adaptate {
+    display: none;
+}
+form {
+    grid-column: 1;
+}
+.catalog {
+    grid-template-rows: 0fr;
+    padding: 0 130px 110px;
+    background-color: #f8f4f0;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+input {
+    border: none;
+    border-bottom: solid 1px black;
+    background-color: transparent;
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 15px;
+    outline: none;
+}
+form h4 {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: #121011;
+    margin-bottom: 27px;
+    margin-top: 35px;
+}
+form span {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #121011;
+}
+input[placeholder="Дом"] {
+    width: 68px;
+    margin-right: 31px;
+}
+input[placeholder="Корпус"] {
+    width: 100px;
+    margin-right: 31px;
+}
+input[placeholder="Подъезд"],
+input[placeholder="Этаж"] {
+    width: 114px;
+    margin-right: 31px;
+}
+input[placeholder="Квартира"] {
+    width: 134px;
+}
+input[placeholder="Желаемая дата и время доставки"] {
+    width: 415px;
+}
+input[placeholder="Город"],
+input[placeholder="Улица"],
+input[placeholder="Ваше имя"],
+input[placeholder="Ваш номер телефона"],
+input[placeholder="Электронный адресс"] {
+    width: 390px;
+}
+
+textarea {
+    width: 523px;
+    height: 93px;
+    resize: none;
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+form button p {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: #121011;
+}
+form button {
+    border: solid 1px #198d9b;
+    padding: 14px 65px;
+    background-color: transparent;
+}
+form .technical {
+    width: 46px;
+    height: 42px;
+    position: relative;
+    background-color: #f8f4f0;
+    bottom: -29px;
+    left: -6px;
+}
+
+.ordering-items-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.value {
+    font-family: "Cinzel";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 54px;
+    color: #121011;
+}
+.currency {
+    font-family: "Cinzel";
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 20px;
+    color: #121011;
+}
+.amount {
+    font-family: "Gilroy";
+    font-style: normal;
+    width: 65px;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    color: #121011;
+    border: 1px solid #198d9b;
+    margin-right: 11px;
+    padding: 7.5px 7.5px;
+}
+.minus,
+.plus {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17px;
+    border: solid 1px rgba(61, 60, 61, 0.35);
+    padding: 3px 7.5px;
+}
+.minus {
+    margin-right: 11px;
+}
+.minus:hover,
+.plus:hover {
+    color: #198d9b;
+    border-color: #198d9b;
+    transition: all 0.7s ease-in-out;
+}
+.minus:disabled,
+.plus:disabled {
+    border: solid 1px rgba(18, 16, 17, 0.4);
+    color: rgba(18, 16, 17, 0.4);
+}
+.ordering-items-info__name h3 {
+    padding-left: 80px;
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+    margin-bottom: 9px;
+}
+.ordering-items-info__name span {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 250;
+    font-size: 20px;
+    line-height: 23px;
+    color: #000000;
+}
+.sum {
+    font-family: "Cinzel";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 54px;
+    color: #121011;
+}
+.valuta {
+    font-family: "Cinzel";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 20px;
+    color: #121011;
+}
+.all-amount {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 250;
+    font-size: 20px;
+    line-height: 23px;
+    color: #000000;
+}
+.ordering-items-info__total-sum {
+    flex-basis: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.ordering-items-info__name {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 430px;
+    align-items: flex-end;
+}
+/* .items-info__operation {
+    display: flex;
+    padding-left: 160px;
+    align-items: center;
+    padding-bottom: 40px;
+} */
+.ordering-items-info__currency {
+    padding-bottom: 40px;
+    flex-basis: 100px;
+}
+.ordering__item {
+    padding-bottom: 30px;
+    padding-top: 15px;
+    border-bottom: solid 1px rgba(25, 141, 155, 0.5);
+}
+.ordering__item:first-child {
+    padding-top: 0px;
+    border-top: none;
+}
+.basket__ordering-all {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    color: #000000;
+    margin-top: 27px;
+}
+.delivery {
+    padding-bottom: 30px;
+}
+p.delivery {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+    border-bottom: solid 1px #198d9b;
+    padding-left: 50px;
+}
+.delivery-currency {
+    font-family: "Cinzel";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 13px;
+    color: #121011;
+    padding-left: 10px;
+}
+.delivery-value {
+    font-family: "Cinzel";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 40px;
+    color: #121011;
+    padding-left: 35px;
+}
+.basket__ordering-value-all {
+    font-family: "Cinzel";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 54px;
+    color: #198d9b;
+    padding-left: 40px;
+}
+.basket__ordering-currency-all {
+    font-family: "Cinzel";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 20px;
+    color: #198d9b;
+    padding-left: 10px;
+}
+.basket__ordering-price {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+    padding-bottom: 15px;
+    border-bottom: solid 1px #198d9b;
+}
+.basket__ordering a {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: #121011;
+    text-decoration: none;
+    border: solid 4px #198d9b;
+    padding: 19px 70px;
+    margin-right: 21px;
+}
+.technical {
+    width: 46px;
+    height: 42px;
+    position: relative;
+    left: -265px;
+    background-color: #f8f4f0;
+    top: 25px;
+}
+.basket__ordering-value {
+    padding-left: 40px;
+    font-family: "Cinzel";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 40px;
+    color: #121011;
+}
+.basket__ordering-currency {
+    padding-left: 10px;
+    font-family: "Cinzel";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 20px;
+}
+.basket__ordering {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-top: 42px;
+}
+.ordering-items-info__technical {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+.empty-basket {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 35px;
+    color: #121011;
+    margin-top: 75px;
+}
+.empty-basket-button {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+}
+.institution-address {
+    border: none;
+    border-bottom: solid 1px black;
+    background-color: transparent;
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 15px;
+    outline: none;
+}
+li option {
+    border-bottom: solid 1px black;
+}
+.product-image,
+.news__image-item,
+.news__image-item-item {
+    width: 100px;
+    height: 100px;
+}

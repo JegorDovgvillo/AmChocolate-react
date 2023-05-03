@@ -1,0 +1,121 @@
+.header__list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    border-bottom: solid 2px #198d9b;
+    margin-right: 92px;
+    padding-right: 31px;
+}
+.header__list-item:hover a {
+    color: #198d9b;
+    transition: all 0.7s ease-in-out;
+}
+img[src*="корзина(черн)"] {
+    margin-bottom: 0px;
+}
+.header__list-item a {
+    text-decoration: none;
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #121011;
+}
+.header {
+    padding-top: 37px;
+    width: 1440px;
+    padding-left: 130px;
+    display: flex;
+    align-items: flex-end;
+    z-index: 10;
+    flex-direction: row;
+    padding-bottom: 10px;
+}
+.header__list-item {
+    margin-bottom: 21px;
+}
+.header .logo {
+    margin-right: 125px;
+}
+.logo:hover path {
+    fill: #198d9b;
+    transition: all 0.7s ease-in-out;
+}
+.header__list-item:first-child {
+    padding-left: 32px;
+}
+.header__list-item:not(.header__list-item:first-child) {
+    margin-left: 44px;
+}
+.number-of-position {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #198d9b;
+    width: 18px;
+    height: 18px;
+    border-radius: 100%;
+    top: -20px;
+    right: -9px;
+    text-align: center;
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 10px;
+    color: #ffffff;
+}
+/*burger*/
+.wrapper {
+    display: none;
+}
+.burger {
+    position: relative;
+    width: 100%;
+    z-index: 50;
+}
+.burger:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+.burger__conteiner {
+    max-width: 1180px;
+    margin: 0px auto;
+    padding: 0px 10px;
+}
+.burger__body {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: 80px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.burger__cross {
+    display: none;
+}
+.burger__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.burger__list li {
+    z-index: 4;
+    margin: 0 0 0 20px;
+    list-style: none;
+}
+.noscroll {
+    overflow-y: hidden;
+}

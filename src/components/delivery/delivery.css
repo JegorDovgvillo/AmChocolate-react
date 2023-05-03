@@ -1,0 +1,88 @@
+
+/*Доставка*/
+.catalog {
+    flex: 1 0 auto;
+    padding: 0 130px 110px;
+    overflow: hidden;
+}
+h1 {
+    font-family: "Arkhip";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    color: #121011;
+    margin-bottom: 30px;
+}
+h2 {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 35px;
+    color: #121011;
+    margin-bottom: 40px;
+}
+h3 {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #121011;
+    margin-bottom: 40px;
+}
+h5 {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 10px;
+}
+.delivery__min-payment {
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+.delivery ul {
+    list-style: decimal;
+    margin-left: 40px;
+    margin-bottom: 40px;
+}
+.delivery li {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #121011;
+}
+.delivery p {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: #000000;
+    margin-left: 24px;
+    margin-bottom: 40px;
+}
+.technical {
+    width: 41px;
+    height: 42px;
+    position: relative;
+    right: 10px;
+    background-color: #f8f4f0;
+}
+.delivery a {
+    text-decoration: none;
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: #121011;
+    border: solid 4px #198d9b;
+    padding: 20px 29px;
+}

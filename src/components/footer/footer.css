@@ -1,0 +1,70 @@
+.footer {
+    display: flex;
+    background-color: #fdfcfb;
+    height: 305px;
+}
+.footer__contacts {
+    display: flex;
+    flex-direction: column;
+    padding-top: 70px;
+}
+.footer__list-item a {
+    text-decoration: none;
+    font-family: "Gilroy";
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #121011;
+}
+.address {
+    font-family: "Gilroy";
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    color: #121011;
+}
+.footer__list-item:hover a {
+    color: #198d9b;
+    transition: all 0.7s ease-in-out;
+}
+.address:hover {
+    color: #198d9b;
+    transition: all 0.7s ease-in-out;
+    cursor: pointer;
+}
+.telephone {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #121011;
+    margin-bottom: 27px;
+}
+.footer__logo {
+    margin-left: 130px;
+    margin-top: 55px;
+}
+.footer__info {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-top: 63px;
+}
+.footer__list-item {
+    margin-bottom: 18px;
+}
+.telegram:hover path,
+.mail:hover path,
+.instagram:hover path {
+    transition: all 0.7s ease-in-out;
+    stroke: #198d9b;
+}
+.footer__contacts a {
+    text-decoration: none;
+    margin-bottom: 27px;
+    margin-right: 16px;
+}
