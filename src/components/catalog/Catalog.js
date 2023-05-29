@@ -4,12 +4,12 @@ import CatalogItem from '../catalogItem/CatalogItem';
 import Spinner from '../spinner/Spinner';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import { addToBasket } from './catalogSlice';
+import { addToBasket } from './catalogSlice';
 import { fetchCatalog, fetchCatalogPopular } from './catalogSlice';
 import Breadcrumbs from '../breadcrumbs/Breadcrumbs';
 import { updateItem } from "../basket/basketSlice"
 
-import './catalog.css'
+// import './catalog.css'
 
 const Catalog = ({ data }) => {
 
@@ -105,7 +105,7 @@ const Catalog = ({ data }) => {
 
     return (
 
-        <div className="catalog">
+        <div className="catalog-product">
             <Breadcrumbs location={window.location.pathname} />
             <Navigation title={data} />
             <div className="catalog__body">

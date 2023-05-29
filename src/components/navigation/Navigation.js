@@ -1,4 +1,4 @@
-
+import './navigation.css'
 
 const Navigation = ({title}) => {
     

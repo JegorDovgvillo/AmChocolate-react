@@ -3,7 +3,7 @@ import './delivery.css'
 const Delivery = () => {
 
     return (
-        <div className="catalog">
+        <div className="delivery-shell">
             <div className="navigation">
                 <div className="breadcrumb">
                     <ol className="breadcrumb__list" itemscope itemtype="https://schema.org/BreadcrumbList">

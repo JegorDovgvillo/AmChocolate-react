@@ -1,5 +1,6 @@
 import { createSlice, createEntityAdapter, createAsyncThunk, createSelector } from "@reduxjs/toolkit";
 import useMarvelService from "../../services/MarvelService";
+
 const catalogAdapter = createEntityAdapter()
 
 const initialState = catalogAdapter.getInitialState({
@@ -55,7 +56,7 @@ const catalogSlice = createSlice({
 
 })
 
-const {selectAll} = catalogAdapter.getSelectors(state => state.catalog)
+const { selectAll } = catalogAdapter.getSelectors(state => state.catalog)
 
 export const goodsSelector = createSelector(
     selectAll,
@@ -67,4 +68,4 @@ export const goodsSelector = createSelector(
 const { actions, reducer } = catalogSlice;
 export default reducer;
 
-export const { addToBasket,deleteItem} = actions;
+export const { addToBasket, deleteItem } = actions;

@@ -1,90 +1,6 @@
-html {
-    height: 100%;
-}
-body {
-    margin: 0 auto;
-    max-width: 1440px;
-    min-width: 375px;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    min-height: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    background: rgba(248, 244, 240, 1);
-}
-/*Хэдер*/
-.header__list {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    border-bottom: solid 2px #198d9b;
-    margin-right: 92px;
-    padding-right: 31px;
-}
-.header__list-item:hover a {
-    color: #198d9b;
-    transition: all 0.7s ease-in-out;
-}
-img[src*="корзина(черн)"] {
-    margin-bottom: 0px;
-}
-.header__list-item a {
-    text-decoration: none;
-    font-family: "Gilroy";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 21px;
-    color: #121011;
-}
-.header {
-    padding-top: 37px;
-    width: 1440px;
-    padding-left: 130px;
-    display: flex;
-    align-items: flex-end;
-    z-index: 10;
-    flex-direction: row;
-    padding-bottom: 10px;
-}
-.header__list-item {
-    margin-bottom: 21px;
-}
-.header .logo {
-    margin-right: 125px;
-}
-.logo:hover path {
-    fill: #198d9b;
-    transition: all 0.7s ease-in-out;
-}
-.header__list-item:first-child {
-    padding-left: 32px;
-}
-.header__list-item:not(.header__list-item:first-child) {
-    margin-left: 44px;
-}
-.number-of-position {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    background-color: #198d9b;
-    width: 18px;
-    height: 18px;
-    border-radius: 100%;
-    top: -20px;
-    right: -9px;
-    text-align: center;
-    font-family: "Gilroy";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 9px;
-    line-height: 10px;
-    color: #ffffff;
-}
+
 /*burger*/
-.wrapper {
+/* .wrapper {
     display: none;
 }
 .burger {
@@ -134,40 +50,8 @@ img[src*="корзина(черн)"] {
 }
 .noscroll {
     overflow-y: hidden;
-}
+}  */
 
-/*хлебные крошки*/
-.breadcrumb {
-    margin-top: 80px;
-    display: flex;
-    flex-wrap: nowrap;
-    padding: 0;
-    margin-bottom: 35px;
-    list-style: none;
-    background-color: transparent;
-    border-radius: 0;
-}
-.breadcrumb__list {
-    display: flex;
-}
-.breadcrumb__list-item:not(.breadcrumb__list-item:last-child)::after {
-    content: " /";
-}
-.breadcrumb__list-item a {
-    text-decoration: none;
-    margin-right: 3px;
-}
-.breadcrumb__list-item {
-    margin-right: 3px;
-}
-.breadcrumb__list-item span {
-    font-family: "Gilroy";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 18px;
-    color: #121011;
-}
 /*Каталог*/
 .catalog {
     flex: 1 0 auto;
@@ -178,6 +62,10 @@ img[src*="корзина(черн)"] {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
+.catalog__body-tecnical {
+    background-color: #e8e3dc;
+    margin: 53px 0 54px;
+}
 .catalog__body-item {
     display: flex;
     flex-direction: column;
@@ -185,10 +73,6 @@ img[src*="корзина(черн)"] {
     padding: 0 38px 0 38px;
     border-left: solid 1px rgba(25, 141, 155, 0.3);
     border-bottom: solid 1px rgba(25, 141, 155, 0.3);
-}
-.catalog__body-tecnical {
-    background-color: #e8e3dc;
-    margin: 53px 0 54px;
 }
 .catalog__body-item:nth-child(3n + 1) {
     padding-left: 0;
@@ -222,11 +106,11 @@ img[src*="корзина(черн)"] {
 .currency:first-child {
     margin-right: 6px;
 }
-.catalog__body img[src$=".png"] {
+.catalog__body-item img[src$=".png"] {
     z-index: 4;
     padding: 0 55px 40px;
 }
-.catalog__body h3 {
+.catalog__body-item h3 {
     text-align: center;
     font-family: "Gilroy";
     font-style: normal;
@@ -248,9 +132,9 @@ img[src*="корзина(черн)"] {
     color: #198d9b;
     transition: all 0.7s ease-in-out;
 }
-.items-info__currency {
+/* .items-info__currency {
     margin-bottom: 0;
-}
+} */
 .catalog__body-item a {
     text-decoration: none;
     font-family: "Gilroy";
@@ -278,7 +162,7 @@ img[src*="корзина(черн)"] {
     top: 28px;
     background-color: #f8f4f0;
 }
-.catalog__body-item:last-child a {
+/* .catalog__body-item:last-child a {
     text-decoration: none;
     font-family: "Gilroy";
     font-style: normal;
@@ -288,8 +172,8 @@ img[src*="корзина(черн)"] {
     color: #121011;
     border: solid 4px #198d9b;
     padding: 23px 30px;
-}
-.catalog__body-item:last-child a:hover {
+} */
+/* .catalog__body-item:last-child a:hover {
     color: #198d9b;
     transition: all 0.7s ease-in-out;
 }
@@ -298,76 +182,5 @@ img[src*="корзина(черн)"] {
 }
 .items-info__currency .basket {
     display: none;
-}
-/* футер*/
-.footer {
-    display: flex;
-    background-color: #fdfcfb;
-    height: 305px;
-}
-.footer__contacts {
-    display: flex;
-    flex-direction: column;
-    padding-top: 70px;
-}
-.footer__list-item a {
-    text-decoration: none;
-    font-family: "Gilroy";
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    color: #121011;
-}
+} */
 
-.address {
-    font-family: "Gilroy";
-    font-weight: 400;
-    font-size: 25px;
-    line-height: 29px;
-    color: #121011;
-}
-.footer__list-item:hover a {
-    color: #198d9b;
-    transition: all 0.7s ease-in-out;
-}
-.address:hover {
-    color: #198d9b;
-    transition: all 0.7s ease-in-out;
-    cursor: pointer;
-}
-.telephone {
-    font-family: "Gilroy";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 28px;
-    color: #121011;
-    margin-bottom: 27px;
-}
-.footer__logo {
-    margin-left: 130px;
-    margin-top: 55px;
-}
-.footer__info {
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-    justify-content: space-around;
-    align-items: center;
-    padding-bottom: 20px;
-    margin-top: 63px;
-}
-.footer__list-item {
-    margin-bottom: 18px;
-}
-.telegram:hover path,
-.mail:hover path,
-.instagram:hover path {
-    transition: all 0.7s ease-in-out;
-    stroke: #198d9b;
-}
-.footer__contacts a {
-    text-decoration: none;
-    margin-bottom: 27px;
-    margin-right: 16px;
-}

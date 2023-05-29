@@ -179,7 +179,7 @@ const Header = () => {
                     <Link className="link" to="/sss">Контакты</Link>
                 </li>
                 <li className="header__list-item">
-                    <Link className="link" to="/main/delivery">Доставка и оплата</Link>
+                    <Link className="link" to="/delivery">Доставка и оплата</Link>
                 </li>
             </ul>
             <div>

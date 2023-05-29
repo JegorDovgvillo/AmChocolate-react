@@ -6,7 +6,7 @@ import tartlets from '../../images/tartlets.png'
 import Spinner from "../spinner/Spinner";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchCatalog } from "../catalog/catalogSlice";
-// import './catalog-main.css'
+import './catalog-main.css'
 
 const CatalogMain = () => {
     const loadingStatus = useSelector(state => state.catalogMain.loadingStatus)

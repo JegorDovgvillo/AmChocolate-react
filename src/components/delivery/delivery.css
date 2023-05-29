@@ -1,11 +1,11 @@
 
 /*Доставка*/
-.catalog {
+.delivery-shell {
     flex: 1 0 auto;
     padding: 0 130px 110px;
     overflow: hidden;
 }
-h1 {
+.delivery h1 {
     font-family: "Arkhip";
     font-style: normal;
     font-weight: 400;
@@ -14,7 +14,7 @@ h1 {
     color: #121011;
     margin-bottom: 30px;
 }
-h2 {
+.delivery h2 {
     font-family: "Gilroy";
     font-style: normal;
     font-weight: 400;
@@ -23,7 +23,7 @@ h2 {
     color: #121011;
     margin-bottom: 40px;
 }
-h3 {
+.delivery h3 {
     font-family: "Gilroy";
     font-style: normal;
     font-weight: 400;
@@ -32,7 +32,7 @@ h3 {
     color: #121011;
     margin-bottom: 40px;
 }
-h5 {
+.delivery h5 {
     font-family: "Gilroy";
     font-style: normal;
     font-weight: 400;

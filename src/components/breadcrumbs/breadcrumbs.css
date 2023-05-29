@@ -1,0 +1,30 @@
+.breadcrumb {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0;
+    margin-bottom: 35px;
+    list-style: none;
+    background-color: transparent;
+    border-radius: 0;
+}
+.breadcrumb__list {
+    display: flex;
+}
+.breadcrumb__list-item:not(.breadcrumb__list-item:last-child)::after {
+    content: " /";
+}
+.breadcrumb__list-item a {
+    text-decoration: none;
+    margin-right: 3px;
+}
+.breadcrumb__list-item {
+    margin-right: 3px;
+}
+.breadcrumb__list-item span {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #121011;
+}

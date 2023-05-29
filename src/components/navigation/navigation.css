@@ -1,0 +1,105 @@
+.navigation h1 {
+    font-family: "Arkhip";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 31px;
+}
+.navigation {
+    display: flex;
+    flex-direction: column;
+}
+.navigation__sections {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+.activeTriangle {
+    transition: all 0.7s ease-in-out;
+    transform: rotateX(180deg);
+}
+.activeTriangle path {
+    stroke: #198d9b;
+}
+.selections a {
+    text-decoration: none;
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #121011;
+    padding: 0 143px 15px 22px;
+}
+.selections {
+    display: none;
+    z-index: 5;
+    top: 365px;
+    position: absolute;
+    background-color: #f8f4f0;
+    box-shadow: 0px 54px 21px rgba(82, 82, 81, 0.01), 0px 30px 18px rgba(82, 82, 81, 0.05),
+        0px 13px 13px rgba(82, 82, 81, 0.09), 0px 3px 7px rgba(82, 82, 81, 0.1), 0px 0px 0px rgba(82, 82, 81, 0.1);
+}
+.activeSelections {
+    display: flex;
+    flex-direction: column;
+}
+.selections a:hover {
+    transition: all 0.7s ease-in-out;
+    color: #198d9b;
+}
+.selections a:first-child {
+    padding-top: 22px;
+}
+.triangle {
+    margin-left: 14px;
+}
+.activeTriangle:hover {
+    transition: all 0.7s ease-in-out;
+    transform: rotateY(180deg);
+}
+.triangle:hover path {
+    stroke: #198d9b;
+}
+.navigation-list {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+.navigation-list li {
+    margin-right: 30px;
+}
+.navigation-list li a {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    text-decoration: none;
+    color: #121011;
+}
+.category {
+    display: none;
+}
+.category__triangle {
+    margin-left: 14px;
+}
+.categoryActiveTriangle:hover {
+    transition: all 0.7s ease-in-out;
+    transform: rotateY(180deg);
+}
+.category__triangle:hover path {
+    stroke: #198d9b;
+}
+.categoryActiveTriangle {
+    transition: all 0.7s ease-in-out;
+    transform: rotateX(180deg);
+}
+.categoryActiveTriangle path {
+    stroke: #198d9b;
+}
+.list-item:hover {
+    color: #198d9b;
+    transition: all 0.7s ease-in-out;
+}
