@@ -23,14 +23,12 @@ img[src*="корзина(черн)"] {
     color: #121011;
 }
 .header {
-    padding-top: 37px;
     width: 1440px;
-    padding-left: 130px;
     display: flex;
     align-items: flex-end;
     z-index: 10;
     flex-direction: row;
-    padding-bottom: 10px;
+    padding: 37px 0 80px 130px;
 }
 .header__list-item {
     margin-bottom: 21px;

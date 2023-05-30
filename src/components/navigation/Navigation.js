@@ -8,7 +8,7 @@ const Navigation = ({title}) => {
         <>
             <div className="navigation">
                 <div className="navigation__sections">
-                    <h1 className="catalog__title">{title.toUpperCase()}</h1>
+                    <h2 className="catalog__title">{title.toUpperCase()}</h2>
                     <svg className="triangle" width="21" height="12" viewBox="0 0 21 12" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path d="M19.3489 1.25L10.5 11.2457L1.65112 1.25L19.3489 1.25Z" stroke="#121011" />

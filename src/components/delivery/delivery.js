@@ -5,7 +5,7 @@ const Delivery = () => {
     return (
         <div className="delivery-shell">
             <div className="navigation">
-                <div className="breadcrumb">
+                <div className="breadcrumbs">
                     <ol className="breadcrumb__list" itemscope itemtype="https://schema.org/BreadcrumbList">
                         <li className="breadcrumb__list-item" itemprop="itemListElement" itemscope
                             itemtype="https://schema.org/ListItem">

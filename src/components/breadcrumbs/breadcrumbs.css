@@ -1,26 +1,27 @@
-.breadcrumb {
+.breadcrumbs {
+    padding-left: 130px;
     display: flex;
     flex-wrap: nowrap;
-    padding: 0;
+
     margin-bottom: 35px;
     list-style: none;
     background-color: transparent;
     border-radius: 0;
 }
-.breadcrumb__list {
+.breadcrumbs__list {
     display: flex;
 }
-.breadcrumb__list-item:not(.breadcrumb__list-item:last-child)::after {
+.breadcrumbs__list-item:not(.breadcrumbs__list-item:last-child)::after {
     content: " /";
 }
-.breadcrumb__list-item a {
+.breadcrumbs__list-item a {
     text-decoration: none;
     margin-right: 3px;
 }
-.breadcrumb__list-item {
+.breadcrumbs__list-item {
     margin-right: 3px;
 }
-.breadcrumb__list-item span {
+.breadcrumbs__list-item span {
     font-family: "Gilroy";
     font-style: normal;
     font-weight: 500;

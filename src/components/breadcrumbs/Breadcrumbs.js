@@ -4,7 +4,7 @@ import './breadcrumbs.css'
 
 const Breadcrumbs = () => {
 
-    function renderBreadcrumbElement(data) {
+    function renderBreadcrumbsElement(data) {
 
         let location = ''
         const items = data.split('/').map((item, i) => {
@@ -14,7 +14,7 @@ const Breadcrumbs = () => {
                 return
             } else {
                 return (
-                    <li className="breadcrumb__list-item "
+                    <li className="breadcrumbs__list-item "
                         key={i}
                         itemProp="itemListElement"
                         itemScope
@@ -28,14 +28,14 @@ const Breadcrumbs = () => {
             }
         })
         return (
-            <ol className="breadcrumb__list" itemScope itemType="https://schema.org/BreadcrumbList">
+            <ol className="breadcrumbs__list" itemScope itemType="https://schema.org/BreadcrumbList">
                 {items}
             </ol>
         )
     }
-    const element = renderBreadcrumbElement(window.location.pathname)
+    const element = renderBreadcrumbsElement(window.location.pathname)
     return (
-        <div className="breadcrumb">
+        <div className="breadcrumbs">
             {element}
         </div>
     )

@@ -6,7 +6,7 @@ import tartlets from '../../images/tartlets.png'
 import Spinner from "../spinner/Spinner";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchCatalog } from "../catalog/catalogSlice";
-import './catalog-main.css'
+import './catalogMain.css'
 
 const CatalogMain = () => {
     const loadingStatus = useSelector(state => state.catalogMain.loadingStatus)
@@ -20,17 +20,17 @@ const CatalogMain = () => {
 
     function renderItem(data) {
 
-        const rndItems = data.map((item, i) => {
+        const mainCatalogItems = data.map((item, i) => {
             return (
-                <div className="catalog__body-item" key={item.id}>
-                    <div className="catalog__body-tecnical">
+                <div className="catalog-body__item" key={item.id}>
+                    <div className="catalog-body__item-tecnical">
                         <h3>Булочки</h3>
                         <img src={tartlets} alt="" />
-                        <div className="items-info">
-                            <div className="items-info__currency">
-                                <span className="currency">От</span>
-                                <span className="value">5</span>
-                                <span className="currency">BYN</span>
+                        <div className="item-info">
+                            <div className="item-info__currency">
+                                <span className="item-info__currency-from">От</span>
+                                <span className="item-info__value">5</span>
+                                <span className="item-info__valuta">BYN</span>
                             </div>
                             <div className="technical"></div>
                             <Link to="/main/catalog/chocolate">заказать</Link>
@@ -40,12 +40,8 @@ const CatalogMain = () => {
             )
         })
         return (
-            <div className="catalog__body">
-                {rndItems}
-                <div className="catalog__body-item">
-                    <div className="technical-elem"></div>
-                    <a href="../Catalog-main/catalog-main.html">Главная страница</a>
-                </div>
+            <div className="catalog-body">
+                {mainCatalogItems}
             </div>
         )
     }
@@ -57,6 +53,7 @@ const CatalogMain = () => {
     return (
         <>
             <Breadcrumbs location={window.location.pathname} />
+            <h2 className="catalog-title">Ассортимент</h2>
             {items}
         </>
 
