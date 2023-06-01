@@ -4,6 +4,9 @@ import arrowBack from '../../images/arrowBack.png'
 import { useDispatch, useSelector } from 'react-redux';
 import { setDisabled, setPosition } from './buttonsSliice';
 
+import './buttons.css'
+
+
 const Buttons = (props) => {
     const dispatch = useDispatch()
     const position = useSelector(state => state.buttons.position)

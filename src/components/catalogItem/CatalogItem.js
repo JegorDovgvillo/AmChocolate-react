@@ -1,7 +1,10 @@
 
 import { useState } from 'react';
-import tartlets from '../../images/tartlets.png'
+
 import basket from '../../images/basket.svg'
+import tartlets from '../../images/tartlets.png'
+
+import './catalogItem.css'
 
 const CatalogItem = ({ name, description, value = 10, compound, addItem, img }) => {
 
@@ -34,15 +37,15 @@ const CatalogItem = ({ name, description, value = 10, compound, addItem, img }) 
 
     return (
         <>
-            <div className={'catalog__body-shell' + activeInfo} >
+            <div className={'catalog__body-item-shell' + activeInfo} >
                 <div className={"catalog__body-item" + activeInfo}>
-                    <div className="catalog__body-header-group">
+                    <div className="catalog__body-item-header-group">
                         <h3>{name}</h3>
                         {/* <img className="cross" src="../../images/крестик.png" /> */}
                     </div>
-                    <div className="image">
-                        <img className={"image-on-click product-image" + activeInfo}
-                            src={img}
+                    <div>
+                        <img className={"image-on-click catalog__body-item-image" + activeInfo}
+                            src={tartlets}
                             alt=""
                             onClick={showDescription} />
                     </div>
@@ -79,12 +82,14 @@ const CatalogItem = ({ name, description, value = 10, compound, addItem, img }) 
                             </button>
                         </div>
                     </div>
-                    <div className={"items-info__operation-onclick" + activeInfo}>
-                        <h4>Описание:</h4>
-                        <p>{description}</p>
-                        <h4>Состав:</h4>
-                        <p>Крем лимонный, лимонный сок, мука пшеничная в/с, мука миндальная,
-                            масло сливочное 82%, сахарная пудра, вода питьевая.</p>
+                    <div className={"items-info__operation_onclick" + activeInfo}>
+                        <div>
+                            <h4>Описание:</h4>
+                            <p>{description}</p>
+                            <h4>Состав:</h4>
+                            <p>Крем лимонный, лимонный сок, мука пшеничная в/с, мука миндальная,
+                                масло сливочное 82%, сахарная пудра, вода питьевая.</p>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 export const sumFunction = (data) => {
     // const dispatch = useDispatch()
-    
+
     let sum = 0
     for (let i = 0; i < data.length; i++) {
         sum += data[i].totalSum
@@ -20,7 +20,7 @@ export const sumFunction = (data) => {
 }
 const Basket = () => {
     const sum = useSelector(state => state.basket.sum)
-    
+
     const newItemsFromBasket = useSelector(basketSelector)
     const dispatch = useDispatch()
 
@@ -32,7 +32,7 @@ const Basket = () => {
         // dispatch(updateBusket(newItemsFromBasket))
     }, [newItemsFromBasket])
 
-    
+
     const onDeleteItem = (id) => {
         dispatch(deleteItemInBusket(id))
         // dispatch(deleteItem(id))
@@ -61,8 +61,8 @@ const Basket = () => {
 
     return (
         <>
+            <Breadcrumbs />
             <div className='navigation'>
-                <Breadcrumbs />
                 <div className="navigation__sections">
                     <h1 className="catalog__title">ВАШ ЗАКАЗ</h1>
                 </div>

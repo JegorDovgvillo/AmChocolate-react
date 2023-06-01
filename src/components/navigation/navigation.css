@@ -9,6 +9,7 @@
 .navigation {
     display: flex;
     flex-direction: column;
+    padding-left: 130px;
 }
 .navigation__sections {
     display: flex;
@@ -63,6 +64,7 @@
     stroke: #198d9b;
 }
 .navigation-list {
+    padding-left: 130px;
     display: flex;
     flex-direction: row;
     margin-bottom: 30px;

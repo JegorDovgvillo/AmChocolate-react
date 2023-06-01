@@ -9,7 +9,7 @@ import { fetchCatalog, fetchCatalogPopular } from './catalogSlice';
 import Breadcrumbs from '../breadcrumbs/Breadcrumbs';
 import { updateItem } from "../basket/basketSlice"
 
-// import './catalog.css'
+import './catalog.css'
 
 const Catalog = ({ data }) => {
 
@@ -35,7 +35,7 @@ const Catalog = ({ data }) => {
                 break;
         }
     }
-    const addItem = (name, id, amount, value,tartlets) => {
+    const addItem = (name, id, amount, value, tartlets) => {
         console.log(tartlets)
         const item = {
             name,
@@ -85,7 +85,6 @@ const Catalog = ({ data }) => {
         const items = goodsList.map((item, i) => {
             return (
                 <CatalogItem
-                    img={item.thumbnail}
                     name={item.name}
                     key={item.id}
                     description={item.description}
@@ -95,33 +94,33 @@ const Catalog = ({ data }) => {
             )
         })
         return (
-            <div className="catalog__body" >
+            <>
                 {items}
-            </div>
+            </>
         )
     }
     const goodsList = renderItems(goods)
     const popularList = renderPopularItems(popularGoods)
 
     return (
-
-        <div className="catalog-product">
+        <>
             <Breadcrumbs location={window.location.pathname} />
             <Navigation title={data} />
-            <div className="catalog__body">
-                {goodsList}
-                <div className="catalog__body-shell-button">
-                    <div className="catalog__body-item">
-                        <div className="technical"></div>
-                        <a href="../Catalog-main/catalog-main.html">весь ассортимент</a>
+            <div className="catalog-products">
+                <div className="catalog__body">
+                    {goodsList}
+                    <div className="catalog__body-item-shell-button">
+                        <div className="catalog__body-item">
+                            <div className="technical"></div>
+                            <a href="../Catalog-main/catalog-main.html">весь ассортимент</a>
+                        </div>
                     </div>
                 </div>
+                <h1 className="popular-title">ПОПУЛЯРНЫЕ ДЕСЕРТЫ</h1>
+                {popularList}
+                <Buttons />
             </div>
-            <h1 className="popular-title">ПОПУЛЯРНЫЕ ДЕСЕРТЫ</h1>
-            {popularList}
-            <Buttons />
-        </div>
-
+        </>
     )
 }
 

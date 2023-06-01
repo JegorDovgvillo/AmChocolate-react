@@ -40,21 +40,23 @@ const CatalogMain = () => {
             )
         })
         return (
-            <div className="catalog-body">
+            <>
                 {mainCatalogItems}
-            </div>
+            </>
         )
     }
+
     if (loadingStatus === 'loading') {
         return <Spinner />
     }
     const items = renderItem(elems)
-
     return (
         <>
             <Breadcrumbs location={window.location.pathname} />
             <h2 className="catalog-title">Ассортимент</h2>
-            {items}
+            <div className="catalog-body">
+                {items}
+            </div>
         </>
 
     )
