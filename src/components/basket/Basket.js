@@ -64,7 +64,7 @@ const Basket = () => {
             <Breadcrumbs />
             <div className='navigation'>
                 <div className="navigation__sections">
-                    <h1 className="catalog__title">ВАШ ЗАКАЗ</h1>
+                    <h2 className="catalog__title">ВАШ ЗАКАЗ</h2>
                 </div>
             </div>
             {(sum === 0) ?

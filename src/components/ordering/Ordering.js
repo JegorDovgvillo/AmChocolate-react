@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { basketSelector, deleteItemInBusket, updateSum,clearBasket } from '../basket/basketSlice'
+import { basketSelector, deleteItemInBusket, updateSum, clearBasket } from '../basket/basketSlice'
 import { sumFunction } from '../basket/Basket';
 import { useEffect, useState } from 'react';
 import { Formik, Field, Form, ErrorMessage, useField } from 'formik';
@@ -23,7 +23,7 @@ const Ordering = () => {
     const sum = useSelector(state => state.basket.sum)
     const dispatch = useDispatch()
     const navigate = useNavigate()
-console.log(items)
+    console.log(items)
 
 
     useEffect(() => {
@@ -39,6 +39,7 @@ console.log(items)
 
     function itemsRender(data) {
         const item = data.map((item, i) => {
+            
             return (
                 <div className="ordering__item" id={item.id} key={item.id}>
 
@@ -91,9 +92,9 @@ console.log(items)
                     payment: false,
                     data: ''
                 }}
-            onSubmit={values =>   {
-                values.data={items}
-                console.log(JSON.stringify(values, null, 2)) 
+            onSubmit={values => {
+                values.data = { items }
+                console.log(JSON.stringify(values, null, 2))
                 dispatch(clearBasket())
                 navigate('/main/catalog')
             }}
@@ -141,7 +142,7 @@ console.log(items)
                             <MyInput type='radio' name='payment' className="payment" value="Оплата курьеру" />
                             <span className="payment-text">Оплата курьеру</span>
                         </li>
-                        
+
                     </ol>
                     <div>
                         <div className="technical"></div>
@@ -153,18 +154,18 @@ console.log(items)
                     </div>
 
                 </Form>
-                <div className="basket">
+                <div className="ordering-basket">
                     {goods}
-                    <div className="basket__ordering">
-                        <p className="basket__ordering-price">
+                    <div className="ordering-basket__bill">
+                        <p className="ordering-basket__price">
                             Сумма заказа:
-                            <span className="basket__ordering-value">{sum}</span>
-                            <span className="basket__ordering-currency">BYN</span>
+                            <span className="ordering-basket__value">{sum}</span>
+                            <span className="ordering-basket__currency">BYN</span>
                         </p>
-                        <p className="basket__ordering-all">
+                        <p className="ordering-basket__total">
                             Итоговая сумма:
-                            <span className="basket__ordering-value-all">{sum}</span>
-                            <span className="basket__ordering-currency-all">BYN</span>
+                            <span className="ordering-basket__total-value">{sum}</span>
+                            <span className="ordering-basket__total-currency">BYN</span>
                         </p>
                     </div>
                 </div>

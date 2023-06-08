@@ -1,0 +1,163 @@
+.menu__counter .menu-arrow-back {
+    margin-right: 20px;
+}
+.menu__counter .reviews-arrow-back {
+    margin-right: 20px;
+}
+.container {
+    padding-left: 130px;
+}
+.menu {
+    background-color: #f8f4f0;
+    overflow: hidden;
+}
+.navbar__title {
+    margin-right: 124px;
+    font-family: "Arkhip";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    color: #121011;
+}
+menu .nav-link__menu {
+    margin-top: 26px;
+    margin-right: 15px;
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    text-decoration: none;
+    color: #121011;
+}
+
+.nav-link__menu:hover {
+    color: #198d9b;
+    transition: all 0.7s ease-in-out;
+}
+
+.menu-card {
+    transition: all 1.1s ease-in-out;
+    position: relative;
+    right: 0px;
+    margin-top: 60px;
+    margin-bottom: -120px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 7px;
+}
+
+.card {
+    margin-right: 16px;
+    background: #e8e3dc !important;
+    border-radius: none !important;
+}
+
+.card__title {
+    padding: 40px 70px 32px 112px;
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 35px;
+    color: #121011;
+}
+
+.card__img {
+    padding: 32px 54px 0 55px;
+}
+
+.card__text {
+    padding: 40px 0px;
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: #121011;
+    text-align: center;
+}
+
+.card__text > span {
+    font-family: "Cinzel", serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 54px;
+    color: #121011;
+}
+
+.card__text > i {
+    font-family: "Cinzel", serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 54px;
+    color: #121011;
+}
+
+.menu-card__btn {
+    margin-top: -70px;
+    margin-bottom: -50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: -155px;
+}
+
+.menu-technical {
+    background-color: #e8e3dc;
+    width: 46px;
+    height: 42px;
+    position: relative;
+    left: -188px;
+}
+
+.menu-page {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu-page__counter {
+    padding: 10px;
+    width: 20px;
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 35px;
+    text-align: center;
+    border: 2px solid #198d9b;
+}
+
+.menu-arrow {
+    margin-bottom: 8px;
+    display: flex;
+    background: transparent;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-left: 21px;
+}
+
+.menu__counter {
+    margin-top: 200px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 190px;
+}
+
+.menu__counter__value {
+    padding: 5px;
+    width: 30px;
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 17px;
+    text-align: center;
+    border: 2px solid #198d9b;
+    opacity: 0.5;
+}

@@ -1,10 +1,10 @@
 import './header.css'
 import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import basketBlack from '../../images/basketBlack.svg'
 const Header = () => {
 
-    const {ids} = useSelector(state=> state.basket)
+    const { ids } = useSelector(state => state.basket)
     return (
         <div className="header">
             <div className="wrapper">
@@ -17,23 +17,23 @@ const Header = () => {
                             <nav className="burger__menu">
                                 <ul className="burger__list">
                                     <li className="header__list-item">
-                                        <Link className="link" to="../main-page/index.html#about">О Нас</Link>
+                                        <NavLink className="link" to="../main-page/index.html#about">О Нас</NavLink>
                                     </li>
                                     <li className="header__list-item">
-                                        <Link className="link" href="../Catalog-main/catalog-main.html">Ассортимент</Link>
+                                        <NavLink className="link" href="../Catalog-main/catalog-main.html">Ассортимент</NavLink>
                                     </li>
                                     <li className="header__list-item">
-                                        <Link className="link" href="../main-page/index.html#news">Новинк</Link>
+                                        <NavLink className="link" href="../main-page/index.html#news">Новинк</NavLink>
                                     </li>
                                     <li className="header__list-item">
-                                        <Link className="link" href="../main-page/index.html#reviews">Отзывы</Link>
+                                        <NavLink className="link" href="../main-page/index.html#reviews">Отзывы</NavLink>
                                     </li>
                                     <li className="header__list-item">
-                                        <Link className="link" href="../main-page/index.html#contacts" target="_blank">Контакты</Link>
+                                        <NavLink className="link" href="../main-page/index.html#contacts" target="_blank">Контакты</NavLink>
                                     </li>
                                     <li className="header__list-item">
-                                        <Link className="link" href="../delivery/delivery.html" target="_blank">Доставка и
-                                            оплата</Link>
+                                        <NavLink className="link" href="../delivery/delivery.html" target="_blank">Доставка и
+                                            оплата</NavLink>
                                     </li>
                                 </ul>
                             </nav>
@@ -42,7 +42,7 @@ const Header = () => {
                 </header>
             </div>
             <div className="header__logo">
-                <Link href="../main-page/index.html">
+                <NavLink href="../main-page/index.html">
                     <svg width="139" height="125" viewBox="0 0 105 107" fill="none" xmlns="http://www.w3.org/2000/svg"
                         className="logo">
                         <g clipPath="url(#clip0_1153_5364)">
@@ -160,32 +160,32 @@ const Header = () => {
                             </clipPath>
                         </defs>
                     </svg>
-                </Link>
+                </NavLink>
             </div>
             <ul className="header__list">
                 <li className="header__list-item">
-                    <Link className="link" to="/main">О Нас</Link>
+                    <NavLink className="link" to="" style={({ isActive }) => ({ color: isActive ? '#198d9b' : '#232134' })}>О Нас</NavLink>
                 </li>
                 <li className="header__list-item">
-                    <Link className="link" to="/main/catalog">Ассортимент</Link>
+                    <NavLink className="link" to="/main/catalog" style={({ isActive }) => ({ color: isActive ? '#198d9b' : '#232134' })}>Ассортимент</NavLink>
                 </li>
                 <li className="header__list-item">
-                    <Link className="link" to="../main-page/index.html#news">Новинки</Link>
+                    <NavLink className="link" to="../main-page/index.html#news" style={({ isActive }) => ({ color: isActive ? '#198d9b' : '#232134' })}>Новинки</NavLink>
                 </li>
                 <li className="header__list-item">
-                    <Link className="link" to="/main/catalog/chocolate">Отзывы</Link>
+                    <NavLink className="link" to="/" style={({ isActive }) => ({ color: isActive ? '#198d9b' : '#232134' })}>Отзывы</NavLink>
                 </li>
                 <li className="header__list-item">
-                    <Link className="link" to="/sss">Контакты</Link>
+                    <NavLink className="link" to="/sss" style={({ isActive }) => ({ color: isActive ? '#198d9b' : '#232134' })}>Контакты</NavLink>
                 </li>
                 <li className="header__list-item">
-                    <Link className="link" to="/delivery">Доставка и оплата</Link>
+                    <NavLink className="link" to="main/delivery" style={({ isActive }) => ({ color: isActive ? '#198d9b' : '#232134' })}>Доставка и оплата</NavLink>
                 </li>
             </ul>
             <div>
-                <Link to="/main/basket" className="main-basket">
-                    <img src={basketBlack} alt="корзина"/>
-                </Link>
+                <NavLink to="/main/basket" className="main-basket">
+                    <img src={basketBlack} alt="корзина" />
+                </NavLink>
                 <div className="number-of-position">{ids.length}</div>
             </div>
         </div>

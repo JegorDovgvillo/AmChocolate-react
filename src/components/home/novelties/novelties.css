@@ -1,0 +1,252 @@
+.navigation-list-new,
+.navigation-list-menu {
+    display: none;
+}
+.navigation-list-new li,
+.navigation-list-menu li {
+    margin-right: 30px;
+}
+.navigation-list-new li a,
+.navigation-list-menu li a {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    text-decoration: none;
+    color: #121011;
+}
+
+.category {
+    display: none;
+}
+.category__triangle-new {
+    margin-left: 14px;
+}
+.categoryActiveTriangleNew:hover {
+    transition: all 0.7s ease-in-out;
+    transform: rotateY(180deg);
+}
+.category__triangle-new:hover path {
+    stroke: #198d9b;
+}
+.categoryActiveTriangleNew {
+    transition: all 0.7s ease-in-out;
+    transform: rotateX(180deg);
+}
+.categoryActiveTriangleNew path {
+    stroke: #198d9b;
+}
+.category__triangle-menu {
+    margin-left: 14px;
+}
+.categoryActiveTriangleMenu:hover {
+    transition: all 0.7s ease-in-out;
+    transform: rotateY(180deg);
+}
+.category__triangle-menu:hover path {
+    stroke: #198d9b;
+}
+.categoryActiveTriangleMenu {
+    transition: all 0.7s ease-in-out;
+    transform: rotateX(180deg);
+}
+.categoryActiveTriangleMenu path {
+    stroke: #198d9b;
+}
+.list-item:hover {
+    color: #198d9b;
+    transition: all 0.7s ease-in-out;
+}
+.list-item:hover {
+    color: #198d9b;
+    transition: all 0.7s ease-in-out;
+}
+.news__image-two .arrow-next {
+    position: relative;
+    bottom: 67px;
+    right: -6px;
+}
+.news__image-two .arrow-back {
+    position: relative;
+    top: 71px;
+    left: -6px;
+}
+.news {
+    background: #fdfcfb;
+}
+
+.nav-link__news:hover {
+    color: #198d9b !important;
+}
+
+.news__image {
+    margin: -40px 128px 0 0px;
+}
+
+.news__image-one {
+    margin-bottom: 26px;
+}
+
+.news__image-item {
+    margin-right: -27px;
+}
+
+.news__image-item:first-child {
+    margin-top: -76px;
+}
+
+.news__image-item:last-child {
+    width: 86px;
+    margin-top: 76px;
+    margin-left: -25px;
+}
+.news__image-two {
+    margin-bottom: 110px;
+}
+.container-fluid-new {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    padding: 112px 50px 140px 0px;
+}
+.d-flex-new {
+    display: flex;
+}
+.news__subtitle {
+    margin-top: -48px;
+    margin-bottom: 43px;
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+}
+
+.news__subtext {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+}
+
+.news__subtext > span {
+    font-family: "Gilroy-UltraLight";
+    font-size: 30px;
+    line-height: 100%;
+}
+
+.news__price {
+    margin-left: -10px;
+    display: inline-flex;
+    column-gap: 60px;
+    align-items: center;
+    /* justify-content: space-around;
+    align-items: center; */
+}
+
+.news__price__text {
+    margin-right: -20px;
+    margin-left: 8px;
+    font-family: "Cinzel", serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 135px;
+}
+
+.news__price__text > span {
+    margin-top: 20px;
+    margin-left: -15px;
+    font-family: "Cinzel", serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.news__counter {
+    display: inline-flex;
+    column-gap: 15px;
+    align-items: center;
+    user-select: none;
+}
+
+.news__counter__btn {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17px;
+    flex: 0 0 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fdfcfb;
+}
+
+.news__counter__value {
+    padding: 10px;
+    width: 45px;
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    border: 2px solid #198d9b;
+}
+
+.news__price-img {
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.news-content__title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+}
+
+.news-content__text {
+    margin-top: 14px;
+    margin-bottom: 27px;
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.btn-news a {
+    margin-left: -280px;
+    padding: 20px 100px;
+}
+
+.technical-news {
+    background-color: #fdfcfb;
+    left: -280px;
+    width: 46px;
+    height: 42px;
+}
+
+.left-arrow__news {
+    background: transparent;
+}
+
+.right-arrow__news {
+    top: -100px;
+    bottom: 30px;
+}
+.news__image__slider {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}

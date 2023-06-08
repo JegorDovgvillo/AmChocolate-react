@@ -6,7 +6,7 @@ import tartlets from '../../images/tartlets.png'
 
 import './catalogItem.css'
 
-const CatalogItem = ({ name, description, value = 10, compound, addItem, img }) => {
+const CatalogItem = ({ name, description, value = 10, compound, addItem }) => {
 
     const [amount, setAmount] = useState(1)
 
@@ -58,7 +58,7 @@ const CatalogItem = ({ name, description, value = 10, compound, addItem, img }) 
                             </div>
                             <button className="basket-adaptate"
                                 onClick={() => {
-                                    addItem(amount, value, img)
+                                    addItem(amount, value, tartlets)
                                     setAmount(1)
                                 }}>
                                 <img src={basket} /></button>
@@ -75,7 +75,7 @@ const CatalogItem = ({ name, description, value = 10, compound, addItem, img }) 
                                 value="+"
                                 onClick={(event) => onChangeAmount(event)} />
                             <button className="basket-desktop" onClick={() => {
-                                addItem(amount, value, img)
+                                addItem(amount, value, tartlets)
                                 setAmount(1)
                             }}>
                                 <img src={basket} />

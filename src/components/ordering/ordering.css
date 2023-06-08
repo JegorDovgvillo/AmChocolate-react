@@ -139,30 +139,7 @@ form .technical {
     margin-right: 11px;
     padding: 7.5px 7.5px;
 }
-.minus,
-.plus {
-    font-family: "Gilroy";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 17px;
-    border: solid 1px rgba(61, 60, 61, 0.35);
-    padding: 3px 7.5px;
-}
-.minus {
-    margin-right: 11px;
-}
-.minus:hover,
-.plus:hover {
-    color: #198d9b;
-    border-color: #198d9b;
-    transition: all 0.7s ease-in-out;
-}
-.minus:disabled,
-.plus:disabled {
-    border: solid 1px rgba(18, 16, 17, 0.4);
-    color: rgba(18, 16, 17, 0.4);
-}
+
 .ordering-items-info__name h3 {
     padding-left: 80px;
     font-family: "Gilroy";
@@ -236,7 +213,7 @@ form .technical {
     padding-top: 0px;
     border-top: none;
 }
-.basket__ordering-all {
+.ordering-basket__total {
     font-family: "Gilroy";
     font-style: normal;
     font-weight: 500;
@@ -276,7 +253,7 @@ p.delivery {
     color: #121011;
     padding-left: 35px;
 }
-.basket__ordering-value-all {
+.ordering-basket__total-value {
     font-family: "Cinzel";
     font-style: normal;
     font-weight: 400;
@@ -285,7 +262,7 @@ p.delivery {
     color: #198d9b;
     padding-left: 40px;
 }
-.basket__ordering-currency-all {
+.ordering-basket__total-currency {
     font-family: "Cinzel";
     font-style: normal;
     font-weight: 700;
@@ -294,7 +271,7 @@ p.delivery {
     color: #198d9b;
     padding-left: 10px;
 }
-.basket__ordering-price {
+.ordering-basket__price {
     font-family: "Gilroy";
     font-style: normal;
     font-weight: 400;
@@ -304,7 +281,7 @@ p.delivery {
     padding-bottom: 15px;
     border-bottom: solid 1px #198d9b;
 }
-.basket__ordering a {
+.ordering-basket__bill a {
     font-family: "Gilroy";
     font-style: normal;
     font-weight: 400;
@@ -325,7 +302,7 @@ p.delivery {
     background-color: #f8f4f0;
     top: 25px;
 }
-.basket__ordering-value {
+.ordering-basket__value {
     padding-left: 40px;
     font-family: "Cinzel";
     font-style: normal;
@@ -334,7 +311,7 @@ p.delivery {
     line-height: 40px;
     color: #121011;
 }
-.basket__ordering-currency {
+.ordering-basket__currency {
     padding-left: 10px;
     font-family: "Cinzel";
     font-style: normal;
@@ -342,7 +319,7 @@ p.delivery {
     font-size: 10px;
     line-height: 20px;
 }
-.basket__ordering {
+.ordering-basket__bill {
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -354,7 +331,7 @@ p.delivery {
     align-items: center;
     justify-content: flex-end;
 }
-.empty-basket {
+/* .empty-basket {
     font-family: "Gilroy";
     font-style: normal;
     font-weight: 400;
@@ -367,7 +344,7 @@ p.delivery {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
-}
+} */
 .institution-address {
     border: none;
     border-bottom: solid 1px black;
@@ -383,9 +360,9 @@ p.delivery {
 li option {
     border-bottom: solid 1px black;
 }
-.product-image,
+/* .product-image,
 .news__image-item,
 .news__image-item-item {
     width: 100px;
     height: 100px;
-}
+} */

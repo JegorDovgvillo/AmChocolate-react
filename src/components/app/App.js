@@ -6,6 +6,7 @@ import CatalogMain from "../catalogMain/CatalogMain";
 import Breadcrumbs from "../breadcrumbs/Breadcrumbs";
 import Basket from "../basket/Basket";
 import Ordering from "../ordering/Ordering";
+import Home from "../home/Home";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import './app.css'
 
@@ -16,7 +17,7 @@ function App() {
         <Header />
 
         <Routes>
-          <Route path='*' element={<Breadcrumbs />} />
+          <Route path='' element={<Home />}></Route>
           <Route path="/main/catalog/chocolate" element={<Catalog data='шоколад' />}></Route>
           <Route path="/main/catalog/chocolate" element={<Catalog data='шоколад' />}></Route>
           <Route path="/catalog/tartlets" element={<Catalog data='тарталетки' />}></Route>
@@ -29,9 +30,9 @@ function App() {
           <Route path="/catalog/spoon" element={<Catalog data='шоколад на ложке' />}></Route>
           <Route path="/catalog/nuts" element={<Catalog data='орехи' />}></Route>
           <Route path="/main/catalog" element={<CatalogMain />}></Route>
-          <Route path="/delivery" element={<Delivery />}></Route>
+          <Route path="main/delivery" element={<Delivery />}></Route>
           <Route path="/main/basket" element={<Basket />}></Route>
-          <Route path="/main/basket/ordering" element={<Ordering/>}></Route>
+          <Route path="/main/basket/ordering" element={<Ordering />}></Route>
         </Routes>
       </>
       <Footer />

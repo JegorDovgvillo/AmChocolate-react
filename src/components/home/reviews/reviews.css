@@ -1,0 +1,99 @@
+.fade-up {
+    padding-left: 46px;
+}
+.reviews {
+    overflow: hidden;
+    background-color: #f8f4f0;
+}
+.reviews__title {
+    margin: 0px 0 73px 0px;
+    font-family: "Arkhip";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    padding-top: 100px;
+}
+
+.reviews-card {
+    position: relative;
+    right: 0px;
+    transition: all 0.7s ease-in-out;
+    margin-left: 46px;
+    margin-bottom: -150px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.reviews .card-body {
+    width: 352px;
+}
+.reviews .card {
+    height: 314px;
+}
+.card__review {
+    height: 200px;
+    padding: 30px 22px 0px 22px;
+    word-wrap: break-word;
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.card-address {
+    padding-left: 26px;
+    display: flex;
+}
+
+.two {
+    margin-top: -23px;
+}
+.news__image-one .news__subtitle {
+    display: none;
+}
+.card-address__img {
+    margin-top: -6px;
+    margin-right: 7px;
+}
+
+.card-address__text {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #198d9b;
+    margin-bottom: 21px;
+}
+
+.card-info {
+    padding-left: 26px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.card-info__date {
+    margin-top: 3px;
+    margin-left: 40px;
+    font-family: "Gilroy-UltraLight";
+    font-style: normal;
+    font-weight: 250;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.card-info__text {
+    margin-bottom: 30px;
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.card-image {
+    margin: -50px 0 0px 46px;
+    padding-bottom: 110px;
+}

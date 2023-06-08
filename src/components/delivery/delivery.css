@@ -1,10 +1,9 @@
 
 /*Доставка*/
 .delivery-shell {
-    flex: 1 0 auto;
-    padding: 0 130px 110px;
-    overflow: hidden;
+    padding: 0 0 110px 130px;
 }
+
 .delivery h1 {
     font-family: "Arkhip";
     font-style: normal;

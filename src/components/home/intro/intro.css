@@ -1,0 +1,148 @@
+.container {
+    display: flex;
+}
+.intro__content {
+    margin-top: 166px;
+}
+.about button {
+    background-color: transparent;
+}
+.scroll-buttons {
+    display: none;
+}
+.about__title-technical {
+    display: none;
+    font-family: "Arkhip";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    color: #2d120f;
+}
+.d-flex-about {
+    display: flex;
+    padding-top: 110px;
+}
+.intro {
+    background: #f8f4f0;
+}
+.intro .btn-body a {
+    margin-left: -210px;
+    margin-bottom: 90px;
+    padding: 14px 65px;
+    font-family: "Gilroy";
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: #121011;
+    border: 4px #198d9b solid;
+}
+.intro .btn-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 160px;
+}
+.intro__subtitle {
+    margin-bottom:13px;
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 250;
+    font-size: 25px;
+    line-height: 29px;
+    text-transform: uppercase;
+}
+.container-fluid-assortment {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    padding: 112px 50px 82px 0px;
+}
+.intro__title {
+    position: relative;
+    margin: 0px -88px 34px 0px;
+    z-index: 9;
+    width: 702px;
+    font-family: "Arkhip";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 75px;
+    line-height: 90px;
+    color: #121011;
+}
+
+.intro__title span {
+    color: #198d9b;
+}
+.menu .nav-link {
+    margin-right: 30px;
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 21px;
+    text-decoration: none;
+    color: #121011;
+}
+.news .nav-link {
+    margin-right: 30px;
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 21px;
+    text-decoration: none;
+}
+.intro__text {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 250;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.btn-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 160px;
+}
+
+.btn-body a {
+    margin-left: -160px;
+    margin-bottom: 90px;
+    padding: 14px 65px;
+    font-family: "Gilroy";
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: #121011;
+    border: 4px #198d9b solid;
+}
+
+.technical-intro {
+    width: 46px;
+    height: 42px;
+    position: relative;
+    left: -214px;
+    background-color: #f8f4f0;
+    top: 27px;
+}
+
+.btn-body a:hover {
+    transition: all 0.7s ease-in-out;
+    color: #198d9b;
+}
+
+.contacts__img {
+    margin-right: 16px;
+}
+.intro__img {
+    margin: 71px -180px 0 0;
+}

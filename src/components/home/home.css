@@ -1,0 +1,206 @@
+ /* ============== Bar-item ============== */
+  
+  .bar-item__menu {
+    margin-top: -80px;
+    margin-left: 570px;
+    width: 100%;
+    max-width: 715px;
+  }
+  
+  .about-slide .slide-img {
+    max-width: 90px;
+    height: 57px;
+  }
+  
+  .fadeSlider {
+    animation-name: fadeSlide;
+    animation-duration: 1.5s;
+  }
+  .news__price-content {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+  }
+  .news__price-content span {
+    margin-left: 20px;
+  }
+  @keyframes fadeSlide {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  form {
+    margin-bottom: 90px;
+  }
+  form button {
+    border: solid 4px #198d9b;
+    padding: 14px 65px;
+    background-color: transparent;
+    margin: 0 0 0 0;
+  }
+  form button p {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: #121011;
+  }
+  form div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .disabled-menu-arrow {
+    opacity: 0.5;
+  }
+  .sliderImage {
+    display: none;
+  }
+  .active-menu {
+    right: 1325px;
+  }
+  .active-menu-third {
+    right: 2655px;
+  }
+  .third-card,
+  .sixth-card {
+    margin-right: 200px;
+  }
+  .active-reviews-second {
+    right: 1290px;
+  }
+  .active-reviews-third {
+    right: 2580px;
+  }
+  .active-reviews-fourth {
+    right: 3870px;
+  }
+  .third,
+  .sixth,
+  .ninth {
+    margin-right: 200px;
+  }
+  .menu-page-third {
+    display: none;
+  }
+  .reviews-arrow {
+    margin-bottom: 8px;
+    display: flex;
+    background: transparent;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-left: 21px;
+  }
+  .menu__counter__value.active {
+    opacity: 1;
+  }
+  .active-card {
+    color: #198d9b;
+  }
+  .scroll-buttons-menu {
+    display: none;
+  }
+  .scroll-buttons__position-first,
+  .scroll-buttons__position-second,
+  .scroll-buttons__position-separator {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .scroll-buttons__position-first {
+    margin-left: 32px;
+  }
+  .scroll-buttons__position-second {
+    margin-right: 32px;
+  }
+  .scroll-buttons-reviews {
+    display: none;
+  }
+  .reviews-fifth-page,
+  .reviews-sixth-page {
+    display: none;
+  }
+  .intro svg {
+    margin-right: 20px;
+  }
+  .telegram:hover path,
+  .mail:hover path,
+  .instagram:hover path {
+    transition: all 0.7s ease-in-out;
+    stroke: #198d9b;
+  }
+  .address:hover {
+    color: #198d9b;
+    transition: all 0.7s ease-in-out;
+    cursor: pointer;
+  }
+  .address {
+    font-family: "Gilroy";
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    color: #121011;
+  }
+  .slide-item:not(.active-image) {
+    opacity: 0.5;
+  }
+  .news__image-item:not(.news-active-img),
+  .news__image-item-item:not(.news-active-img) {
+    opacity: 0.5;
+  }
+  .minus:hover,
+  .plus:hover,
+  .basket-desktop:hover {
+    cursor: pointer;
+  }
+  .information {
+    background-color: #f8f4f0;
+    display: flex;
+    flex-direction: row;
+    padding: 50px 130px 50px 130px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .information__date {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 250;
+    font-size: 16px;
+    line-height: 18px;
+    color: #121011;
+    padding-right: 20px;
+  }
+  .information a {
+    text-decoration: none;
+    color: #121011;
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 250;
+    font-size: 16px;
+    line-height: 18px;
+    text-decoration: underline;
+  }
+  .information__location {
+    width: 420px;
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 250;
+    font-size: 16px;
+    line-height: 18px;
+    color: #121011;
+    padding-right: 20px;
+    text-align: center;
+  }
+  .information__designer-adaptate {
+    display: none;
+  }
+  .footer-social svg {
+    margin-right: 16px;
+  }

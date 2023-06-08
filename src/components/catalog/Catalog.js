@@ -8,7 +8,7 @@ import { addToBasket } from './catalogSlice';
 import { fetchCatalog, fetchCatalogPopular } from './catalogSlice';
 import Breadcrumbs from '../breadcrumbs/Breadcrumbs';
 import { updateItem } from "../basket/basketSlice"
-
+import tartlets from '../../images/tartlets.png'
 import './catalog.css'
 
 const Catalog = ({ data }) => {
@@ -61,7 +61,7 @@ const Catalog = ({ data }) => {
                     name={item.name}
                     key={item.id}
                     description={item.description}
-                    addItem={(amount, value, img) => addItem(item.name, item.id, amount, value, img)} />
+                    addItem={(amount, value, tartlets) => addItem(item.name, item.id, amount, value, tartlets)} />
             )
         })
         return (
