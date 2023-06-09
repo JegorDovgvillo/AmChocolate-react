@@ -1,21 +1,18 @@
-.contact {
+.contacts {
     background-color: #f8f4f0;
+    padding-left: 130px;
+    padding-bottom: 110px;
 }
-.d-flex-contact {
+.contacts-container {
     display: flex;
-    padding-bottom: 100px;
+    flex-direction: row;
 }
-.contact {
-    margin-top: -150px;
-    background: #f8f4f0;
-}
-
-.contact .card-body {
-    padding: 0px 28px 0 58px;
+.contacts .card-body {
+    padding: 0px 58px;
     border-radius: none !important;
 }
 
-.contact__title {
+.contacts__title {
     margin-bottom: 73px;
     padding-top: 110px;
     font-family: "Arkhip";
@@ -25,21 +22,21 @@
     line-height: 48px;
 }
 
-.contact__image {
+.contacts__image {
     margin-right: 30px;
 }
 
-.contact__subtitle {
-    padding: 47px 0px 11px 0px;
+.contacts__subtitle {
+    padding: 47px 0px 17px 0px;
     font-family: "Gilroy";
     font-style: normal;
     font-weight: 500;
-    font-size: 26px;
+    font-size: 28px;
     line-height: 33px;
     color: #198d9b;
 }
 
-.contact__tel {
+.contacts__tel {
     margin-bottom: 11px;
     font-family: "Gilroy";
     font-style: normal;
@@ -49,23 +46,23 @@
     color: #121011;
     text-decoration: none;
 }
-.contact__tel:hover {
+.contacts__tel:hover {
     transition: all 0.7s ease-in-out;
     color: #198d9b;
 }
 
-.contact-time {
+.contacts-time {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
 }
 
-.contact-time__icon {
+.contacts-time__icon {
     margin-top: 15px;
 }
 
-.contact-time__text {
+.contacts-time__text {
     margin-bottom: -20px;
     font-size: 18px;
     font-family: "Gilroy";
@@ -77,7 +74,7 @@
     margin-right: 12px;
 }
 
-.contact-homeaddress {
+.contacts-homeaddress {
     margin: 49px 0 11px 0px;
     font-family: "Gilroy";
     font-style: normal;
@@ -86,7 +83,19 @@
     line-height: 33px;
 }
 
-.contact-social {
-    padding-bottom: 50px;
+.contacts-social {
+    padding-bottom: 51px;
     margin-top: 28px;
+}
+.address:hover {
+    color: #198d9b;
+    transition: all 0.7s ease-in-out;
+    cursor: pointer;
+}
+.address {
+    font-family: "Gilroy";
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 29px;
+    color: #121011;
 }

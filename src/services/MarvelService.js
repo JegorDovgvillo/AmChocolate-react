@@ -13,7 +13,10 @@ const useMarvelService = () => {
 		const res = await request(`${_apiBase}characters?limit=${quantity}&offset=${offset}&${_apiKey}`);
 		return res.data.results.map(_transformGoods);
 	};
-
+	const getNameOfGoods = async () => {
+		const res = await request(`http://amchocol.vh116.hosterby.com/products/categories/`);
+		return res;
+	};
 	const _transformGoods = (char) => {
 		return {
 			id: char.id,
@@ -29,7 +32,8 @@ const useMarvelService = () => {
 	};
 
 	return {
-		getAllGoods
+		getAllGoods,
+		getNameOfGoods
 	};
 };
 

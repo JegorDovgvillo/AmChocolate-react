@@ -5,7 +5,7 @@ import Breadcrumbs from "../breadcrumbs/Breadcrumbs";
 import tartlets from '../../images/tartlets.png'
 import Spinner from "../spinner/Spinner";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchCatalog } from "../catalog/catalogSlice";
+import { fetchCatalogMain } from "./catalogMainSlice";
 import './catalogMain.css'
 
 const CatalogMain = () => {
@@ -15,17 +15,17 @@ const CatalogMain = () => {
 
 
     useEffect(() => {
-        dispatch(fetchCatalog())
+        dispatch(fetchCatalogMain())
     }, [])
 
     function renderItem(data) {
 
         const mainCatalogItems = data.map((item, i) => {
             return (
-                <div className="catalog-body__item" key={item.id}>
+                <div className="catalog-body__item" key={i}>
                     <div className="catalog-body__item-tecnical">
-                        <h3>Булочки</h3>
-                        <img src={tartlets} alt="" />
+                        <h3>{item.name}</h3>
+                        <img src={item.image} alt={item.name} />
                         <div className="item-info">
                             <div className="item-info__currency">
                                 <span className="item-info__currency-from">От</span>

@@ -7,29 +7,30 @@ const initialState = catalogMainAdapter.getInitialState({
     elems: [],
     loadingStatus: 'idle'
 })
-fetchCatalog()
-// export const fetchCatalogMain = createAsyncThunk(
-//     'catalogMain/fetchCatalogMain',
-//     async () => {
-//         const { getAllGoods } = useMarvelService()
-//         return await getAllGoods()
-//     }
-// );
+// fetchCatalog()
+export const fetchCatalogMain = createAsyncThunk(
+    'catalogMain/fetchCatalogMain',
+    async () => {
+        const { getNameOfGoods } = useMarvelService()
+        return await getNameOfGoods()
+    }
+);
 const catalogMainSlice = createSlice ({
     name: 'catalogMain',
     initialState,
     reducers : {},
     extraReducers: (builder) => {
         builder
-            .addCase(fetchCatalog.pending, state => { state.loadingStatus = 'loading' })
-            .addCase(fetchCatalog.fulfilled, (state, action) => {
+            .addCase(fetchCatalogMain.pending, state => { state.loadingStatus = 'loading' })
+            .addCase(fetchCatalogMain.fulfilled, (state, action) => {
                 state.loadingStatus = 'idle'
                 state.elems = action.payload
             })
-            .addCase(fetchCatalog.rejected, state => { state.loadingStatus = 'error' })
+            .addCase(fetchCatalogMain.rejected, state => { state.loadingStatus = 'error' })
     }
 })
 
 const {actions, reducer} = catalogMainSlice;
+
 
 export default reducer;

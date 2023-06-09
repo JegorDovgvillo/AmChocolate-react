@@ -1,4 +1,4 @@
-.container {
+.intro-container {
     display: flex;
 }
 .intro__content {
@@ -25,6 +25,7 @@
 }
 .intro {
     background: #f8f4f0;
+    padding-left: 130px;
 }
 .intro .btn-body a {
     margin-left: -210px;
@@ -47,7 +48,7 @@
     margin-right: 160px;
 }
 .intro__subtitle {
-    margin-bottom:13px;
+    margin-bottom: 13px;
     font-family: "Gilroy";
     font-style: normal;
     font-weight: 250;

@@ -7,7 +7,7 @@ const Intro = () => {
 
     return (
         <div className="intro">
-            <div className="container">
+            <div className="intro-container">
                 <div className="intro__content">
                     <h1 className="intro__subtitle">Кондитерская</h1>
                     <h1 className="intro__title">AM <span>CHOCOLATE</span></h1>
