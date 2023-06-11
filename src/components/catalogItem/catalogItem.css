@@ -6,6 +6,7 @@
     border-bottom: solid 1px rgba(25, 141, 155, 0.3);
 }
 .catalog__body-item-shell {
+    height: 630px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -198,7 +199,7 @@
     display: none;
 }
 .catalog__body-item-shell.activeInfo {
-    padding-top: 15px;
+    z-index: 1;
     transition: all 0.7s ease-in-out;
 }
 .catalog__body-item-header-group {

@@ -4,7 +4,7 @@
     padding-left: 130px;
 }
 
-.arrow-back {
+.about-container.arrow-back {
     left: 190px;
     top: 180px;
     position: absolute;
@@ -12,7 +12,7 @@
 button.arrow-back {
     border: none;
 }
-.arrow-next {
+.about-container.arrow-next {
     position: absolute;
     top: 60px;
 }

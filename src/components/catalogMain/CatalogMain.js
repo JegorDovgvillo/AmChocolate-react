@@ -33,7 +33,7 @@ const CatalogMain = () => {
                                 <span className="item-info__valuta">BYN</span>
                             </div>
                             <div className="technical"></div>
-                            <Link to="/main/catalog/chocolate">заказать</Link>
+                            <Link to="/main/catalog/tartlets">заказать</Link>
                         </div>
                     </div>
                 </div>

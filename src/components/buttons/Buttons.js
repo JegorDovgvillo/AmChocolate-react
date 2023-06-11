@@ -1,70 +1,67 @@
 
 import arrowNext from '../../images/arrowNext.png'
 import arrowBack from '../../images/arrowBack.png'
-import { useDispatch, useSelector } from 'react-redux';
-import { setDisabled, setPosition } from './buttonsSliice';
-
 import './buttons.css'
 
 
-const Buttons = (props) => {
-    const dispatch = useDispatch()
-    const position = useSelector(state => state.buttons.position)
-    const disabled = useSelector(state => state.buttons.disabled)
+const Buttons = ({ perPage, totalVacancies, nextPageOnButton, currentPage, nextPageOnArrow, disabled }) => {
+    const pageNumbers = []
 
-    const slider = (e) => {
-        switch (e.target.className) {
-            case "scroll-buttons__second":
-                dispatch(setDisabled(!disabled))
-                dispatch(setPosition(position + 415))
-                break;
-            case "scroll-buttons__first":
-                dispatch(setDisabled(!disabled))
-                dispatch(setPosition(position + 415))
-                break;
-            case "arrow-back":
-            case "scroll-buttons__arrow-back":
-                dispatch(setDisabled(!disabled))
-                dispatch(setPosition(position - 415))
-                break;
-            case "arrow-next":
-            case "scroll-buttons__arrow-next":
-                dispatch(setDisabled(!disabled))
-                dispatch(setPosition(position + 415))
-                break;
-            default:
-                break;
-        }
-    } 
+    for (let i = 1; i <= Math.ceil(totalVacancies / perPage); i++) {
+        pageNumbers.push(i)
+    }
+    // const slider = (e) => {
+    //     switch (e.target.className) {
+    //         case "scroll-buttons__second":
+    //             dispatch(setDisabled(!disabled))
+    //             dispatch(setPosition(position + 415))
+    //             break;
+    //         case "scroll-buttons__first":
+    //             dispatch(setDisabled(!disabled))
+    //             dispatch(setPosition(position + 415))
+    //             break;
+    //         case "arrow-back":
+    //         case "scroll-buttons__arrow-back":
+    //             dispatch(setDisabled(!disabled))
+    //             dispatch(setPosition(position - 415))
+    //             break;
+    //         case "arrow-next":
+    //         case "scroll-buttons__arrow-next":
+    //             dispatch(setDisabled(!disabled))
+    //             dispatch(setPosition(position + 415))
+    //             break;
+    //         default:
+    //             break;
+    //     }
+    // } 
 
 
     return (
-        <div className="scroll-buttons" >
+        <div className="buttons" >
             <button
-                className="scroll-buttons__arrow-back"
-                onClick={(e) => slider(e)}
-                disabled={disabled}>
+                className="buttons__arrow-back"
+                disabled={(currentPage === pageNumbers[0]) ? disabled : null}
+                onClick={(e) => nextPageOnArrow(e)}
+            >
                 <img className="arrow-back" src={arrowBack} />
             </button>
-            <span className="scroll-buttons__position-first">1</span>
+            {/* <span className="scroll-buttons__position-first">1</span>
             <span className="scroll-buttons__position-separator">/</span>
-            <span className="scroll-buttons__position-second">4</span>
-            <input
-                disabled={disabled}
-                type="button"
-                className={"scroll-buttons__first"}
-                value="1"
-                onClick={(e) => slider(e)} />
-            <input
-                disabled={!disabled}
-                type="button"
-                className="scroll-buttons__second"
-                value="2"
-                onClick={(e) => slider(e)} />
+            <span className="scroll-buttons__position-second">4</span> */}
+            {
+                pageNumbers.map(number => (
+                    <button className={(currentPage === number) ? 'button-item active' : 'button-item'} type='button'
+                        key={number}
+                        onClick={() => nextPageOnButton(number)}>
+                        <p>{number}</p>
+                    </button>
+                ))
+            }
             <button
-                className="scroll-buttons__arrow-next"
-                onClick={(e) => slider(e)}
-                disabled={!disabled}>
+                className="buttons__arrow-next"
+                onClick={(e) => nextPageOnArrow(e)}
+                disabled={(currentPage === pageNumbers[pageNumbers.length - 1]) ? disabled : null}
+            >
                 <img className="arrow-next" src={arrowNext} />
             </button>
         </div>

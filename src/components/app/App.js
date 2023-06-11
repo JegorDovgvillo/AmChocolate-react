@@ -19,16 +19,15 @@ function App() {
         <Routes>
           <Route path='' element={<Home />}></Route>
           <Route path="/main/catalog/chocolate" element={<Catalog data='шоколад' />}></Route>
-          <Route path="/main/catalog/chocolate" element={<Catalog data='шоколад' />}></Route>
-          <Route path="/catalog/tartlets" element={<Catalog data='тарталетки' />}></Route>
-          <Route path="/catalog/caramel" element={<Catalog data='карамель' />}></Route>
-          <Route path="/catalog/cookie" element={<Catalog data='печенье' />}></Route>
-          <Route path="/catalog/eclairs" element={<Catalog data='эклеры' />}></Route>
-          <Route path="/catalog/lolipop" element={<Catalog data='лолипоп' />}></Route>
-          <Route path="/catalog/mendiant" element={<Catalog data='мендиант' />}></Route>
-          <Route path="/catalog/truffle" element={<Catalog data='трюфель' />}></Route>
-          <Route path="/catalog/spoon" element={<Catalog data='шоколад на ложке' />}></Route>
-          <Route path="/catalog/nuts" element={<Catalog data='орехи' />}></Route>
+          <Route path="/main/catalog/tartlets" element={<Catalog data='тарталетки' />}></Route>
+          <Route path="/main//catalog/caramel" element={<Catalog data='карамель' />}></Route>
+          <Route path="/main//catalog/cookie" element={<Catalog data='печенье' />}></Route>
+          <Route path="/main//catalog/eclairs" element={<Catalog data='эклеры' />}></Route>
+          <Route path="/main//catalog/lolipop" element={<Catalog data='лолипоп' />}></Route>
+          <Route path="/main//catalog/mendiant" element={<Catalog data='мендиант' />}></Route>
+          <Route path="/main//catalog/truffle" element={<Catalog data='трюфель' />}></Route>
+          <Route path="/main//catalog/spoon" element={<Catalog data='шоколад на ложке' />}></Route>
+          <Route path="/main//catalog/nuts" element={<Catalog data='орехи' />}></Route>
           <Route path="/main/catalog" element={<CatalogMain />}></Route>
           <Route path="main/delivery" element={<Delivery />}></Route>
           <Route path="/main/basket" element={<Basket />}></Route>
