@@ -1,11 +1,8 @@
-.fade-up {
-    padding-left: 46px;
-}
 .reviews {
     overflow: hidden;
     background-color: #f8f4f0;
 }
-.reviews__title {
+.reviews-container__title {
     margin: 0px 0 73px 0px;
     font-family: "Arkhip";
     font-style: normal;
@@ -14,16 +11,19 @@
     line-height: 48px;
     padding-top: 100px;
 }
-
+.reviews-container {
+    padding-left: 130px;
+    padding-bottom: 110px;
+}
 .reviews-card {
     position: relative;
     right: 0px;
     transition: all 0.7s ease-in-out;
     margin-left: 46px;
-    margin-bottom: -150px;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
+    margin-bottom: 38px;
 }
 .reviews .card-body {
     width: 352px;
@@ -41,14 +41,9 @@
     font-size: 20px;
     line-height: 23px;
 }
-
 .card-address {
     padding-left: 26px;
     display: flex;
-}
-
-.two {
-    margin-top: -23px;
 }
 .news__image-one .news__subtitle {
     display: none;
@@ -57,7 +52,6 @@
     margin-top: -6px;
     margin-right: 7px;
 }
-
 .card-address__text {
     font-family: "Gilroy";
     font-style: normal;
@@ -67,13 +61,11 @@
     color: #198d9b;
     margin-bottom: 21px;
 }
-
 .card-info {
     padding-left: 26px;
     display: flex;
     justify-content: flex-start;
 }
-
 .card-info__date {
     margin-top: 3px;
     margin-left: 40px;
@@ -83,7 +75,6 @@
     font-size: 14px;
     line-height: 16px;
 }
-
 .card-info__text {
     margin-bottom: 30px;
     font-family: "Gilroy";
@@ -92,8 +83,17 @@
     font-size: 18px;
     line-height: 21px;
 }
-
 .card-image {
     margin: -50px 0 0px 46px;
     padding-bottom: 110px;
+}
+.reviews-container__img {
+    display: flex;
+    margin-left: 46px;
+    margin-top: 40px;
+    justify-content: flex-start;
+}
+
+.reviews .buttons {
+    margin-right: 170px;
 }
