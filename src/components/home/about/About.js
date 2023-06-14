@@ -9,7 +9,6 @@ const About = () => {
     return (
         <section className="about">
             <div className="about-container">
-
                 <div className="about__content">
                     <h2 className="about__title" id="about">О НАС</h2>
                     <p className="about__text">
@@ -40,13 +39,9 @@ const About = () => {
                     <div className="about-slider" id="slide">
                         <img className="slide-item img1" src={about1} width=" 90" height="57" alt="" />
                         <img className="slide-item img2" src="/images/about2.png" width="120" height="77" alt="" />
-
                         <img className="arrow-back" src={arrowBack} />
-
                         <img className="slide-item img3 active-image" src="/images/about3.png" width="107" height="142" alt="" />
-
                         <img className="arrow-next" src={arrowNext} />
-
                         <img className="slide-item img4" src="/images/about4.png" width="120" height="77;" alt="" />
                         <img className="slide-item img5" src="/images/about5.png" width="90" height="57" alt="" />
                     </div>
@@ -62,7 +57,6 @@ const About = () => {
                             </button>
                         </div> */}
                 </div>
-
             </div>
         </section>
     )

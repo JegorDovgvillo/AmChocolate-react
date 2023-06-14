@@ -44,12 +44,13 @@
 .card-address {
     padding-left: 26px;
     display: flex;
+    margin-bottom: 21px;
+    align-items: center;
 }
 .news__image-one .news__subtitle {
     display: none;
 }
 .card-address__img {
-    margin-top: -6px;
     margin-right: 7px;
 }
 .card-address__text {
@@ -59,12 +60,12 @@
     font-size: 16px;
     line-height: 19px;
     color: #198d9b;
-    margin-bottom: 21px;
 }
 .card-info {
     padding-left: 26px;
     display: flex;
     justify-content: flex-start;
+    align-items: flex-end;
 }
 .card-info__date {
     margin-top: 3px;
@@ -76,7 +77,6 @@
     line-height: 16px;
 }
 .card-info__text {
-    margin-bottom: 30px;
     font-family: "Gilroy";
     font-style: normal;
     font-weight: 600;

@@ -67,7 +67,8 @@
     font-size: 18px;
     font-family: "Gilroy";
 }
-.card-body img {
+.contacts .card-body img {
+    vertical-align: bottom;
     margin-right: 12px;
 }
 .card-body svg {

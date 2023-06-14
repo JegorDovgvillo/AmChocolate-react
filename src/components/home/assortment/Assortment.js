@@ -39,7 +39,7 @@ const Assortment = () => {
     function renderNameOfGoods(data) {
         const item = data.map((item, i) => {
             return (
-                <li className="navigation-list__item">
+                <li key={i} className="navigation-list__item">
                     <a className="list-item" href="./src/pages/Catalog-chocolate/catalog-chocolate.html">{item.name}</a>
                 </li>
             )
@@ -55,7 +55,7 @@ const Assortment = () => {
         const item = data.map((item, i) => {
             ++i
             return (
-                <div className="card" style={{ marginRight: (i !== 0 && i % 3 == 0) ? '180px' : '16px' }}>
+                <div className="card" key={i} style={{ marginRight: (i !== 0 && i % 3 == 0) ? '180px' : '16px' }}>
                     <h1 className="card__title">{item.name}</h1>
                     <img className="card__img" src={item.image} alt="cards1" />
                     <div className="card-body">

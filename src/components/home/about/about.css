@@ -108,7 +108,7 @@ button.arrow-back {
     margin-top: 145px;
 }
 
-.arrow {
+/* .arrow {
     font-size: 20px;
     color: #121011;
     border: none;
@@ -129,4 +129,13 @@ button.arrow-back {
 
 .fas {
     width: 50px;
+} */
+.about .arrow-back {
+    bottom: 4px;
+    position: absolute;
+    left: 190px;
+}
+.about .arrow-next {
+    position: absolute;
+    top: 60px;
 }

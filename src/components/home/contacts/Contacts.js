@@ -1,4 +1,5 @@
 import contacts from '../../../images/contacts.png'
+import contactsImg from '../../../images/contacts-timer.png'
 import './contacts.css'
 
 const Contacts = () => {
@@ -18,7 +19,7 @@ const Contacts = () => {
                             <a className="contacts__tel" href="tel:+375(29)5555555">+ 375 (29) 555 55 55</a>
                             <div className="contacts-time">
                                 <div className="contacts-time__icon">
-                                    <img src="/images/contacts-timer.png" alt="" />
+                                    <img src={contactsImg} alt="" />
                                 </div>
                                 <p className="contacts-time__text">08:00 - 21:00</p>
                             </div>
@@ -32,7 +33,7 @@ const Contacts = () => {
                             <a className="contacts__tel" href="tel:+375(29)4445555">+ 375 (29) 444 55 55</a>
                             <div className="contacts-time">
                                 <div className="contacts-time__icon">
-                                    <img src="/images/contacts-timer.png" alt="" />
+                                    <img src={contactsImg} alt="" />
                                 </div>
                                 <p className="contacts-time__text">07:00 - 21:00</p>
                             </div>

@@ -2,7 +2,8 @@ import Buttons from '../../buttons/Buttons';
 import { fetchCatalog, fetchCatalogPopular } from '../../catalog/catalogSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
-import img from '../../../images/clients-main-img.png'
+import mainImg from '../../../images/clients-main-img.png'
+import locationImg from '../../../images/clients-icon.png'
 import './reviews.css'
 
 const Reviews = () => {
@@ -49,7 +50,7 @@ const Reviews = () => {
             ++i
             
             return (
-                <div className="card" style={{ marginRight: (i !== 0 && i % 3 == 0) ? '180px' : '16px' }}>
+                <div className="card" key={i} style={{ marginRight: (i !== 0 && i % 3 == 0) ? '180px' : '16px' }}>
                     <div className="card-body">
                         <p className="card__review">
                             Я уже постоянный клиент.
@@ -59,13 +60,13 @@ const Reviews = () => {
                         </p>
                         <div className="card-address">
                             <div className="card-address__img">
-                                <img src="/images/clients-icon.png" />
+                                <img src={locationImg} />
                             </div>
                             <p className="card-address__text">Немига 3</p>
                         </div>
                         <div className="card-info">
                             <p className="card-info__text">Алина</p>
-                            <div className="card-info__date">10.08.2022</div>
+                            <p className="card-info__date">10.08.2022</p>
                         </div>
                     </div>
                 </div>
@@ -103,7 +104,7 @@ const Reviews = () => {
                     totalVacancies={reviews.length}
                     nextPageOnButton={nextPageOnButton} />
                 <div className='reviews-container__img'>
-                    <img src={img} />
+                    <img src={mainImg} />
                 </div>
             </div>
         </div>

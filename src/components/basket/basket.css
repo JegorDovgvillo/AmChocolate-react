@@ -217,6 +217,9 @@
     display: flex;
     flex-direction: column;
 }
+.basket .product-image {
+    width: 100px;
+}
 /* .catalog__body-shell {
     display: flex;
     flex-direction: column;

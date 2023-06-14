@@ -4,10 +4,11 @@ import { sumFunction } from '../basket/Basket';
 import { useEffect, useState } from 'react';
 import { Formik, Field, Form, ErrorMessage, useField } from 'formik';
 import { useNavigate } from 'react-router-dom';
+import * as Yup from 'yup'
 import './ordering.css'
 
 
-const MyInput = ({ ...props }) => {
+export const MyInput = ({ ...props }) => {
     const [field, meta] = useField(props)
     return (
         <>
@@ -23,7 +24,7 @@ const Ordering = () => {
     const sum = useSelector(state => state.basket.sum)
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    console.log(items)
+
 
 
     useEffect(() => {
@@ -39,7 +40,7 @@ const Ordering = () => {
 
     function itemsRender(data) {
         const item = data.map((item, i) => {
-            
+
             return (
                 <div className="ordering__item" id={item.id} key={item.id}>
 
@@ -71,27 +72,52 @@ const Ordering = () => {
         )
     }
     const goods = itemsRender(items)
-
+    const telRegExp = /^(\+?375\-?|8\-?0)(17|25|29|33|44)\-?[1-9]\d{2}(\-?\d{2}){2}$/
     return (
         <Formik
             initialValues={
                 {
-                    name: '',
-                    tel: '',
-                    email: '',
+                    // name: '',
+                    // tel: '',
+                    // email: '',
                     delivery: '',
-                    city: '',
-                    street: '',
-                    house: '',
-                    housing: '',
-                    porch: '',
-                    floor: '',
-                    flat: '',
-                    date: '',
-                    comment: '',
+                    // city: '',
+                    // street: '',
+                    // house: '',
+                    // housing: '',
+                    // porch: '',
+                    // floor: '',
+                    // flat: '',
+                    // date: '',
+                    // comment: '',
                     payment: false,
                     data: ''
                 }}
+            validationSchema={Yup.object({
+                // name: Yup.string()
+                //     .required('Обязательное поле'),
+                // tel: Yup.string()
+                //     .matches(telRegExp, 'Введите корректный телефон')
+                //     .required('Обязательное поле'),
+                // email: Yup.string()
+                //     .email('Введите корректную почту')
+                //     .required('Обязательное поле'),
+                delivery: Yup.string()
+                    .required('Необходимо выбрать один вариант'),
+                // city: Yup.string()
+                //     .required('Обязательное поле'),
+                // street: Yup.string()
+                //     .required('Обязательное поле'),
+                // house: Yup.string()
+                //     .required('Обязательное поле'),
+                // flat: Yup.string()
+                //     .required('Обязательное поле'),
+                // date: Yup.string()
+                //     .required('Обязательное поле'),
+                payment: Yup.boolean()
+                    .required('Необходимо согласие')
+                    .oneOf([true], '1111')
+            })}
             onSubmit={values => {
                 values.data = { items }
                 console.log(JSON.stringify(values, null, 2))
@@ -102,12 +128,12 @@ const Ordering = () => {
             <div className='catalog'>
                 <Form>
                     <ol>
-                        <li>
+                        {/* <li>
                             <h4>1. Контактные данные</h4>
                             <MyInput type='text' name='name' placeholder='Ваше имя' className="name" /><br />
                             <MyInput type='tel' name='tel' placeholder='Ваш номер телефона' className="tel" /><br />
                             <MyInput type='email' name='email' placeholder='Электронный адресс' className="email" />
-                        </li>
+                        </li> */}
                         <li>
                             <h4>2. Способ доставки</h4>
                             <label>
@@ -119,7 +145,7 @@ const Ordering = () => {
                                 <span className="delivery-method-text">Доставка курьером</span>
                             </label>
                         </li>
-                        <li className="delivery-address">
+                        {/* <li className="delivery-address">
                             <h4>3. Адрес доставки</h4>
                             <MyInput type='text' name='city' placeholder='Город' /><br />
                             <MyInput type='text' name='street' placeholder='Улица' /><br />
@@ -136,10 +162,10 @@ const Ordering = () => {
                         <li>
                             <h4>5. Коментарий к заказу</h4>
                             <Field as='textarea' placeholder=" Напишите коментарий" name="comment" />
-                        </li>
+                        </li> */}
                         <li>
                             <h4>6. Способ оплаты</h4>
-                            <MyInput type='radio' name='payment' className="payment" value="Оплата курьеру" />
+                            <MyInput type='radio' name='payment' className="payment" value='false' />
                             <span className="payment-text">Оплата курьеру</span>
                         </li>
 
