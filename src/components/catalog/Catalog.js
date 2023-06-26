@@ -1,15 +1,17 @@
+
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { setCategory } from './catalogSlice';
+import { fetchCatalog, fetchCatalogPopular } from './catalogSlice';
+import { updateItem } from "../basket/basketSlice"
+import { useState } from 'react';
+
 import Navigation from '../navigation/Navigation';
 import Buttons from '../buttons/Buttons';
 import CatalogItem from '../catalogItem/CatalogItem';
 import Spinner from '../spinner/Spinner';
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { addToBasket } from './catalogSlice';
-import { fetchCatalog, fetchCatalogPopular } from './catalogSlice';
 import Breadcrumbs from '../breadcrumbs/Breadcrumbs';
-import { updateItem } from "../basket/basketSlice"
-import { useState } from 'react';
-import tartlets from '../../images/tartlets.png'
+
 import './catalog.css'
 
 
@@ -21,7 +23,6 @@ const Catalog = ({ data }) => {
     const loadingStatus = useSelector(state => state.catalog.loadingStatus)
     const goods = useSelector(state => state.catalog.goods)
     const popularGoods = useSelector(state => state.catalog.popularGoods)
-
     const [currentPage, setCurrentPage] = useState(1)
     const [perPage] = useState(3)
 
@@ -35,17 +36,17 @@ const Catalog = ({ data }) => {
 
     const nextPageOnButton = (pageNumber) => {
         setCurrentPage(pageNumber)
-        setPosition(415 * pageNumber - 415)
+        setPosition(1194 * pageNumber - 1194)
     }
 
     const nextPageOnArrow = (e) => {
         if (e.currentTarget.className === 'buttons__arrow-back' && currentPage > 1) {
             setCurrentPage(currentPage => currentPage - 1)
-            setPosition(position => position - 415)
+            setPosition(position => position - 1194)
         }
         if (e.currentTarget.className === 'buttons__arrow-next' && currentPage < totalPages) {
             setCurrentPage(currentPage => currentPage + 1)
-            setPosition(position => position + 415)
+            setPosition(position => position + 1194)
         }
     }
 
@@ -55,17 +56,18 @@ const Catalog = ({ data }) => {
             case 'шоколад':
                 dispatch(fetchCatalog())
                 dispatch(fetchCatalogPopular())
+                dispatch(setCategory(2))
                 break;
             case 'тарталетки':
-                dispatch(fetchCatalog())
-                dispatch(fetchCatalogPopular())
+                dispatch(fetchCatalog(1))
+                dispatch(fetchCatalogPopular(3))
+
                 break;
         }
     }
-    const addItem = (name, id, amount, value, tartlets) => {
-        console.log(tartlets)
+    const addItem = (title, id, amount, value, tartlets) => {
         const item = {
-            name,
+            title,
             img: tartlets,
             id,
             amount,
@@ -83,11 +85,16 @@ const Catalog = ({ data }) => {
         const itemsPopular = popularGoodsList.map((item, i) => {
             return (
                 <CatalogItem
-                    name={item.name}
+                    img={item.image}
+                    compound={item.composition}
+                    title={item.title}
+                    price={item.price}
                     key={item.id}
                     description={item.description}
-                    addItem={(amount, value, tartlets) => addItem(item.name, item.id, amount, value, tartlets)} />
+                    addItem={(amount, value, img, title) => addItem(title, item.id, amount, value, img)}
+                />
             )
+
         })
         return (
             <div style={{ right: `${position}px` }}
@@ -98,25 +105,39 @@ const Catalog = ({ data }) => {
     }
 
     function renderItems(goodsList) {
-        const items = goodsList.map((item, i) => {
-            return (
-                <CatalogItem
-                    name={item.name}
-                    key={item.id}
-                    description={item.description}
-                    addItem={(amount, value, img) => addItem(item.name, item.id, amount, value, img)}
+        const blocks = []
+        for (let i = 0; i < goodsList.length; i += 3) {
+            const blockItems = goodsList.slice(i, i + 3);
+            console.log(blockItems)
+            const block = (
+                <div className='items-wrap' key={Math.floor(Math.random() * 100) + 1}>
+                    {blockItems.map((item, i) => {
+                        return (
+                            <CatalogItem
+                                img={item.image}
+                                compound={item.composition}
+                                title={item.title}
+                                price={item.price}
+                                key={item.id}
+                                description={item.description}
+                                addItem={(amount, value, img, title) => addItem(title, item.id, amount, value, img)}
+                            />
+                        )
+                    })}
+                </div>
 
-                />
-            )
-        })
+            );
+            blocks.push(block);
+        }
         return (
             <>
-                {items}
+                {blocks}
             </>
         )
     }
+
     const goodsList = renderItems(goods)
-    const popularList = renderPopularItems(goods)
+    const popularList = renderPopularItems(popularGoods)
 
     return (
         <>
@@ -125,11 +146,11 @@ const Catalog = ({ data }) => {
             <div className="catalog-products">
                 <div className="catalog__body">
                     {goodsList}
-                    <div className="catalog__body-item-shell-button">
-                        <div className="catalog__body-item">
-                            <div className="technical"></div>
-                            <a href="../Catalog-main/catalog-main.html">весь ассортимент</a>
-                        </div>
+                </div>
+                <div className="catalog-products__button-shell">
+                    <div className="catalog-products__button">
+                        <div className="technical"></div>
+                        <a href="/main/catalog">весь ассортимент</a>
                     </div>
                 </div>
                 <h1 className="popular-title">ПОПУЛЯРНЫЕ ДЕСЕРТЫ</h1>

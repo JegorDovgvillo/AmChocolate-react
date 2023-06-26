@@ -25,7 +25,7 @@ input {
     font-weight: 400;
     font-size: 24px;
     line-height: 28px;
-    margin-bottom: 15px;
+    margin-bottom: 40px;
     outline: none;
 }
 form h4 {
@@ -36,7 +36,6 @@ form h4 {
     line-height: 23px;
     color: #121011;
     margin-bottom: 27px;
-    margin-top: 35px;
 }
 form span {
     font-family: "Gilroy";
@@ -82,6 +81,10 @@ textarea {
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
+}
+form .error {
+    position: absolute;
+    margin-top: -30px;
 }
 form button p {
     font-family: "Gilroy";
@@ -148,7 +151,6 @@ form .technical {
     font-size: 24px;
     line-height: 28px;
     color: #000000;
-    margin-bottom: 9px;
 }
 .ordering-items-info__name span {
     font-family: "Gilroy";
@@ -192,14 +194,8 @@ form .technical {
     display: flex;
     flex-direction: row;
     flex-basis: 430px;
-    align-items: flex-end;
-}
-/* .items-info__operation {
-    display: flex;
-    padding-left: 160px;
     align-items: center;
-    padding-bottom: 40px;
-} */
+}
 .ordering-items-info__currency {
     padding-bottom: 40px;
     flex-basis: 100px;
@@ -331,20 +327,6 @@ p.delivery {
     align-items: center;
     justify-content: flex-end;
 }
-/* .empty-basket {
-    font-family: "Gilroy";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 35px;
-    color: #121011;
-    margin-top: 75px;
-}
-.empty-basket-button {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-} */
 .institution-address {
     border: none;
     border-bottom: solid 1px black;
@@ -354,15 +336,9 @@ p.delivery {
     font-weight: 400;
     font-size: 24px;
     line-height: 28px;
-    margin-bottom: 15px;
+    margin-bottom: 40px;
     outline: none;
 }
 li option {
     border-bottom: solid 1px black;
 }
-/* .product-image,
-.news__image-item,
-.news__image-item-item {
-    width: 100px;
-    height: 100px;
-} */

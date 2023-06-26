@@ -1,7 +1,8 @@
-import about1 from '../../../images/about1.png'
-import './about.css'
+import about from '../../../images/about1.png'
 import arrowNext from '../../../images/arrowNext.png'
 import arrowBack from '../../../images/arrowBack.png'
+
+import './about.css'
 
 const About = () => {
 
@@ -37,7 +38,7 @@ const About = () => {
                         <img width="590" height="425" src="/images/sliderImages/1.jpg" className="main-image" alt="" />
                     </div>
                     <div className="about-slider" id="slide">
-                        <img className="slide-item img1" src={about1} width=" 90" height="57" alt="" />
+                        <img className="slide-item img1" src={about} width=" 90" height="57" alt="" />
                         <img className="slide-item img2" src="/images/about2.png" width="120" height="77" alt="" />
                         <img className="arrow-back" src={arrowBack} />
                         <img className="slide-item img3 active-image" src="/images/about3.png" width="107" height="142" alt="" />

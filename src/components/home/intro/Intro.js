@@ -1,9 +1,8 @@
 import image from '../../../images/image.png'
 
 import './intro.css'
+
 const Intro = () => {
-
-
 
     return (
         <div className="intro">

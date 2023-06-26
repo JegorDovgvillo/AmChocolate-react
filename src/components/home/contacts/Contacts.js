@@ -1,9 +1,9 @@
 import contacts from '../../../images/contacts.png'
 import contactsImg from '../../../images/contacts-timer.png'
+
 import './contacts.css'
 
 const Contacts = () => {
-
 
     return (
         <div className="contacts" id="contacts">

@@ -2,27 +2,27 @@ import { useState } from "react"
 import { updateItem } from "../basket/basketSlice"
 import { useDispatch } from "react-redux"
 
-const BasketItem = ({ name, id, value, amount, img,onDeleteItem }) => {
+const BasketItem = ({ title, id, value, amount, img, onDeleteItem }) => {
     const dispatch = useDispatch()
     const [quantity, setQuantity] = useState(amount)
     const [cost, setCost] = useState(value)
 
     const onChangeAmount = (e) => {
         if (e.target.value === '+') {
-            setQuantity( quantity => quantity + 1)
+            setQuantity(quantity => quantity + 1)
             const item = {
-                name,
+                title,
                 id,
                 amount: quantity + 1,
                 value,
                 totalSum: (quantity + 1) * cost
             }
             dispatch(updateItem(item))
-            
-        }  else if (e.target.value === '-' && quantity !== 1) {
+
+        } else if (e.target.value === '-' && quantity !== 1) {
             setQuantity(quantity => quantity - 1)
             const item = {
-                name,
+                title,
                 id,
                 amount: quantity - 1,
                 value,
@@ -32,7 +32,7 @@ const BasketItem = ({ name, id, value, amount, img,onDeleteItem }) => {
         }
 
     }
-    
+
     return (
         <div className="basket__item" >
             <div className="items-info">
@@ -40,7 +40,7 @@ const BasketItem = ({ name, id, value, amount, img,onDeleteItem }) => {
                     <img className="product-image" src={img} />
                 </div>
                 <div className="items-info__name">
-                    <h3>{name}</h3>
+                    <h3>{title}</h3>
                     <span className="units">(1шт.)</span>
                 </div>
                 <div className="items-info__technical">
@@ -58,7 +58,7 @@ const BasketItem = ({ name, id, value, amount, img,onDeleteItem }) => {
                         />
                     </div>
                     <div className="total-sum">
-                        <img className="items-info__cross" src="../../images/крестик.png"  onClick={() => onDeleteItem(id)}/>
+                        <img className="items-info__cross" src="../../images/крестик.png" onClick={() => onDeleteItem(id)} />
                         <div>
                             <span className="sum">{quantity * cost}</span>
                             <span className="valuta">Byn</span>

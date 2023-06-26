@@ -1,26 +1,28 @@
 import { createSlice, createEntityAdapter, createAsyncThunk, createSelector } from "@reduxjs/toolkit";
+
 import useMarvelService from "../../services/MarvelService";
 
 const catalogAdapter = createEntityAdapter()
 
 const initialState = catalogAdapter.getInitialState({
     loadingStatus: 'idle',
+    category: 0,
     goods: [],
     popularGoods: []
 })
 
 export const fetchCatalog = createAsyncThunk(
     'catalog/fetchCatalog',
-    async () => {
+    async (category) => {
         const { getAllGoods } = useMarvelService()
-        return await getAllGoods()
+        return await getAllGoods(category)
     }
 );
 export const fetchCatalogPopular = createAsyncThunk(
     'catalog/fetchCatalogPopular',
-    async () => {
+    async (category) => {
         const { getAllGoods } = useMarvelService()
-        return await getAllGoods(230, 4)
+        return await getAllGoods(category)
     }
 );
 const catalogSlice = createSlice({
@@ -33,7 +35,9 @@ const catalogSlice = createSlice({
         // deleteItem: (state, action) => {
         //     catalogAdapter.removeOne(state,action.payload)
         // }
-
+        // setCategory:(state, action) => {
+        //     state.category = action.payload
+        // }
     },
     extraReducers: (builder) => {
         builder
@@ -68,4 +72,4 @@ export const goodsSelector = createSelector(
 const { actions, reducer } = catalogSlice;
 export default reducer;
 
-export const { addToBasket, deleteItem } = actions;
+export const { addToBasket, deleteItem,setCategory } = actions;

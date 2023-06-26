@@ -1,13 +1,10 @@
 import { createSlice, createEntityAdapter, createSelector } from "@reduxjs/toolkit";
 
-
 const basketAdapter = createEntityAdapter()
-
 
 const initialState = basketAdapter.getInitialState({
     sum: 0
 })
-
 
 const basketSlice = createSlice({
     name: 'basket',

@@ -6,7 +6,7 @@ import tartlets from '../../images/tartlets.png'
 
 import './catalogItem.css'
 
-const CatalogItem = ({ name, description, value = 10, compound, addItem }) => {
+const CatalogItem = ({ title, description, compound, addItem, img, price, }) => {
 
     const [amount, setAmount] = useState(1)
 
@@ -40,7 +40,7 @@ const CatalogItem = ({ name, description, value = 10, compound, addItem }) => {
             <div className={'catalog__body-item-shell' + activeInfo} >
                 <div className={"catalog__body-item" + activeInfo}>
                     <div className="catalog__body-item-header-group">
-                        <h3>{name}</h3>
+                        <h3>{title}</h3>
                         {/* <img className="cross" src="../../images/крестик.png" /> */}
                     </div>
                     <div>
@@ -51,14 +51,14 @@ const CatalogItem = ({ name, description, value = 10, compound, addItem }) => {
                     </div>
                     <div className={"items-info" + activeInfo}>
                         <div className="items-info__currency">
-                            <span className="value">{value}</span>
+                            <span className="value">{price}</span>
                             <div className="items-info__apiece">
                                 <span className="currency">BYN</span>
                                 <span className="units">(1шт.)</span>
                             </div>
                             <button className="basket-adaptate"
                                 onClick={() => {
-                                    addItem(amount, value, tartlets)
+                                    addItem(amount, price, tartlets,title)
                                     setAmount(1)
                                 }}>
                                 <img src={basket} /></button>
@@ -75,7 +75,7 @@ const CatalogItem = ({ name, description, value = 10, compound, addItem }) => {
                                 value="+"
                                 onClick={(event) => onChangeAmount(event)} />
                             <button className="basket-desktop" onClick={() => {
-                                addItem(amount, value, tartlets)
+                                addItem(amount, price, tartlets,title)
                                 setAmount(1)
                             }}>
                                 <img src={basket} />
@@ -87,8 +87,7 @@ const CatalogItem = ({ name, description, value = 10, compound, addItem }) => {
                             <h4>Описание:</h4>
                             <p>{description}</p>
                             <h4>Состав:</h4>
-                            <p>Крем лимонный, лимонный сок, мука пшеничная в/с, мука миндальная,
-                                масло сливочное 82%, сахарная пудра, вода питьевая.</p>
+                            <p>{compound}</p>
                         </div>
                     </div>
                 </div>

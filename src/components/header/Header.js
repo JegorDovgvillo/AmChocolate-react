@@ -1,7 +1,10 @@
-import './header.css'
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+
 import basketBlack from '../../images/basketBlack.svg'
+
+import './header.css'
+
 const Header = () => {
 
     const { ids } = useSelector(state => state.basket)

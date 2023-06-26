@@ -1,13 +1,14 @@
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+
 import Footer from "../footer/Footer";
 import Header from "../header/Header";
 import Catalog from "../catalog/Catalog";
 import Delivery from "../delivery/delivery";
 import CatalogMain from "../catalogMain/CatalogMain";
-import Breadcrumbs from "../breadcrumbs/Breadcrumbs";
 import Basket from "../basket/Basket";
 import Ordering from "../ordering/Ordering";
 import Home from "../home/Home";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+
 import './app.css'
 
 function App() {
@@ -29,7 +30,7 @@ function App() {
           <Route path="/main//catalog/spoon" element={<Catalog data='шоколад на ложке' />}></Route>
           <Route path="/main//catalog/nuts" element={<Catalog data='орехи' />}></Route>
           <Route path="/main/catalog" element={<CatalogMain />}></Route>
-          <Route path="main/delivery" element={<Delivery />}></Route>
+          <Route path="/main/delivery" element={<Delivery />}></Route>
           <Route path="/main/basket" element={<Basket />}></Route>
           <Route path="/main/basket/ordering" element={<Ordering />}></Route>
         </Routes>

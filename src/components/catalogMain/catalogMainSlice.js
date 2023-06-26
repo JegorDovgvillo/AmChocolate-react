@@ -1,13 +1,14 @@
 import { createEntityAdapter, createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+
 import useMarvelService from "../../services/MarvelService";
-import { fetchCatalog } from "../catalog/catalogSlice";
+
 const catalogMainAdapter = createEntityAdapter()
 
 const initialState = catalogMainAdapter.getInitialState({
     elems: [],
     loadingStatus: 'idle'
 })
-// fetchCatalog()
+
 export const fetchCatalogMain = createAsyncThunk(
     'catalogMain/fetchCatalogMain',
     async () => {

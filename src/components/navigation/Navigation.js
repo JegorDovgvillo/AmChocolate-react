@@ -1,9 +1,7 @@
 import './navigation.css'
 
-const Navigation = ({title}) => {
-    
-    
-    
+const Navigation = ({ title }) => {
+
     return (
         <>
             <div className="navigation">

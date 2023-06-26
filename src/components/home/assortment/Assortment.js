@@ -1,10 +1,11 @@
 import { useSelector } from "react-redux";
 import { useEffect, useState } from 'react'
 import { useDispatch } from "react-redux";
-import './assortment.css'
 import { fetchCatalogMain } from "../../catalogMain/catalogMainSlice";
+
 import Buttons from "../../buttons/Buttons";
 
+import './assortment.css'
 const Assortment = () => {
     const dispatch = useDispatch()
     const [position, setPosition] = useState(0)

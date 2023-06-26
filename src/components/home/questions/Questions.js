@@ -1,6 +1,9 @@
-import question from '../../../images/question.png'
-import { Formik, Form, ErrorMessage } from 'formik';
+
+import { Formik, Form } from 'formik';
 import { MyInput } from '../../ordering/Ordering';
+
+import question from '../../../images/question.png'
+
 import './questions.css'
 
 const Questions = () => {

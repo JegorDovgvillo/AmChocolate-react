@@ -19,7 +19,7 @@ const Breadcrumbs = () => {
                         itemProp="itemListElement"
                         itemScope
                         itemType="https://schema.org/ListItem">
-                        <Link itemProp="item" to={location} >
+                        <Link itemProp="item" to={location}  >
                             <span itemProp="name">{item}</span>
                         </Link>
                         <meta itemProp="position" content={i} />

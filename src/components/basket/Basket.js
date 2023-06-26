@@ -1,11 +1,13 @@
-import './basket.css'
-// import { goodsSelector, deleteItem } from '../catalog/catalogSlice';
-import Breadcrumbs from '../breadcrumbs/Breadcrumbs';
+
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteItemInBusket, updateSum, basketSelector } from '../basket/basketSlice'
-import BasketItem from '../basketItem/BasketItem';
 import { Link } from 'react-router-dom';
+
+import BasketItem from '../basketItem/BasketItem';
+import Breadcrumbs from '../breadcrumbs/Breadcrumbs';
+
+import './basket.css'
 
 export const sumFunction = (data) => {
     // const dispatch = useDispatch()
@@ -43,7 +45,7 @@ const Basket = () => {
                 <BasketItem
                     onDeleteItem={(id) => onDeleteItem(id)}
                     img={item.img}
-                    name={item.name}
+                    title={item.title}
                     id={item.id}
                     amount={item.amount}
                     value={item.value}

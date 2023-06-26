@@ -1,8 +1,8 @@
 
 import arrowNext from '../../images/arrowNext.png'
 import arrowBack from '../../images/arrowBack.png'
-import './buttons.css'
 
+import './buttons.css'
 
 const Buttons = ({ perPage, totalVacancies, nextPageOnButton, currentPage, nextPageOnArrow, disabled }) => {
     const pageNumbers = []

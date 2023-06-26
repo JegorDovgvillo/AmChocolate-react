@@ -1,11 +1,11 @@
-// import useMarvelService from "../../services/MarvelService";
 import { useEffect } from "react";
 import { Link } from 'react-router-dom';
-import Breadcrumbs from "../breadcrumbs/Breadcrumbs";
-import tartlets from '../../images/tartlets.png'
-import Spinner from "../spinner/Spinner";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchCatalogMain } from "./catalogMainSlice";
+
+import Breadcrumbs from "../breadcrumbs/Breadcrumbs";
+import Spinner from "../spinner/Spinner";
+
 import './catalogMain.css'
 
 const CatalogMain = () => {

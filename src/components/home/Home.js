@@ -1,8 +1,3 @@
-import './home.css'
-
-
-
-
 import Intro from './intro/Intro'
 import About from './about/About'
 import Assortment from './assortment/Assortment'
@@ -11,18 +6,18 @@ import Reviews from './reviews/Reviews'
 import Questions from './questions/Questions'
 import Contacts from './contacts/Contacts'
 
+import './home.css'
+
 const Home = () => {
-
-
     return (
         <>
-        <Intro/>
-        <About/>
-        <Assortment/>
-        <Novelties/>
-        <Reviews/>
-        <Questions/>
-        <Contacts/>
+            <Intro />
+            <About />
+            <Assortment />
+            <Novelties />
+            <Reviews />
+            <Questions />
+            <Contacts />
         </>
     )
 }
