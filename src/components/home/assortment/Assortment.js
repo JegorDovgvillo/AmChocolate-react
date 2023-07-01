@@ -19,6 +19,7 @@ const Assortment = () => {
     const current = reviews.slice(firstIndex, lastIndex)
     const totalPages = Math.ceil(reviews.length / perPage)
     const elems = useSelector(state => state.catalogMain.elems)
+
     useEffect(() => {
         dispatch(fetchCatalogMain())
     }, [])
@@ -92,26 +93,6 @@ const Assortment = () => {
                             </svg>
                             <p>Тарталетки</p>
                         </div>
-                        {/* <ul className="navigation-list-menu">
-                            <li className="navigation-list__item">
-                                <a className="list-item" href="./src/pages/Catalog-chocolate/catalog-chocolate.html">Шоколад</a>
-                            </li>
-                            <li className="navigation-list__item">
-                                <a className="list-item" href="./src/pages/catalog-tartlets/catalog-tartlets.html">Тарталетки</a>
-                            </li>
-                            <li className="navigation-list__item">
-                                <a className="list-item" href="./src/pages/catalog-cookie/catalog-cookie.html">Печенье</a>
-                            </li>
-                            <li className="navigation-list__item">
-                                <a className="list-item" href="./src/pages/catalog-caramel/catalog-caramel.html">Карамель</a>
-                            </li>
-                            <li className="navigation-list__item">
-                                <a className="list-item" href="./src/pages/catalog-eclairs/catalog-eclairs.html">Эклеры</a>
-                            </li>
-                            <li className="navigation-list__item">
-                                <a className="list-item" href="./src/pages/catalog-truffle/catalog-truffle.html">Трюфель</a>
-                            </li>
-                        </ul> */}
                         {barItem}
                     </div>
                 </nav>

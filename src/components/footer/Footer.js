@@ -1,4 +1,5 @@
 import './footer.css'
+import './footerAdaptate.scss'
 
 const Footer = () => {
     return (

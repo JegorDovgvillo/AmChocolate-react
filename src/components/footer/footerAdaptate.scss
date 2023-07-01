@@ -1,0 +1,42 @@
+@media only all and (max-width: 975px) {
+    .footer__logo {
+        margin-left: 21px;
+    }
+}
+@media only all and (max-width: 975px) {
+    .footer {
+        flex-direction: column;
+        .footer__logo {
+            margin-left: 0px;
+            margin-top: 34px;
+            text-align: center;
+        }
+        .address {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        .footer__info {
+            margin-top: 34px;
+            justify-content: flex-start;
+            margin-left: 20px;
+            .footer__contacts {
+                padding-top: 0px;
+                .telephone {
+                    font-size: 18px;
+                    margin-bottom: 15px;
+                }
+            }
+            .footer__list {
+                display: none;
+            }
+        }
+    }
+}
+
+@media only all and (max-width: 790px) {
+    .footer {
+        svg {
+            width: 100px;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@media only all and (max-width: 1440px) {
+    .breadcrumbs {
+        padding-left: 40px;
+    }
+}
+
+@media only all and (max-width: 1300px) {
+    .breadcrumbs {
+        padding-left: 20px;
+    }
+}
+
+@media only all and (max-width: 975px) {
+    .breadcrumbs {
+        display: none;
+    }
+}

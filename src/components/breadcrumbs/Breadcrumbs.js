@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 
 import './breadcrumbs.css'
+import './breadcrumbsAdaptate.scss'
 
 const Breadcrumbs = () => {
 

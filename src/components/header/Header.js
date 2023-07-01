@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import basketBlack from '../../images/basketBlack.svg'
 
 import './header.css'
+import './headerAdaptate.scss'
 
 const Header = () => {
 
